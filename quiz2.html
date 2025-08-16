@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cheerful Quiz App (URL Input)</title>
+<style>
+    body { 
+        font-family: 'Comic Sans MS', cursive, sans-serif; 
+        background: linear-gradient(120deg, #f6d365, #fda085); 
+        display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; 
+    }
+    .container { 
+        background: #fff; padding: 30px; border-radius: 20px; max-width: 600px; width: 90%; 
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3); text-align: center; 
+    }
+    h2 { margin-bottom: 20px; color: #ff6f61; }
+    input { width: 90%; padding: 10px; margin-bottom: 20px; border-radius: 10px; border: 1px solid #ccc; font-size: 14px; }
+    button { padding: 12px 25px; font-size: 16px; border: none; border-radius: 10px; cursor: pointer; background: #ffdab9; transition: transform 0.2s; }
+    button:hover { transform: scale(1.05); background: #ffd700; }
+    .option { display: block; margin: 10px 0; width: 100%; }
+    .correct { background: #90ee90 !important; }
+    .wrong { background: #ff7f7f !important; }
+    #score { margin-top: 20px; font-weight: bold; font-size: 18px; color: #333; }
+</style>
+</head>
+<body>
+
+<div class="container" id="urlStep">
+    <h2>Enter your Quiz JSON URL</h2>
+    <input type="text" id="jsonURL" placeholder="Paste your raw JSON URL here" />
+    <br>
+    <button id="startBtn">Start Quiz</button>
+</div>
+
+<div class="container" id="quizStep" style="display:none;">
+    <h2 id="question">Question will appear here</h2>
+    <div id="options"></div>
+    <p id="score"></p>
+</div>
+
+<audio id="correctSound" src="https://freesound.org/data/previews/320/320655_5260873-lq.mp3"></audio>
+<audio id="wrongSound" src="https://freesound.org/data/previews/331/331912_3248244-lq.mp3"></audio>
+
+<script>
+let quiz = [];
+let currentQuestion = 0;
+let score = 0;
+
+const correctSound = document.getElementById("correctSound");
+const wrongSound = document.getElementById("wrongSound");
+
+const urlStep = document.getElementById("urlStep");
+const quizStep = document.getElementById("quizStep");
+const startBtn = document.getElementById("startBtn");
+const jsonInput = document.getElementById("jsonURL");
+
+startBtn.addEventListener("click", () => {
+    const url = jsonInput.value.trim();
+    if(!url){
+        alert("Please enter a valid URL");
+        return;
+    }
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+          if(!Array.isArray(data)) throw "JSON must be an array of questions";
+          quiz = data;
+          urlStep.style.display = "none";
+          quizStep.style.display = "block";
+          loadQuestion();
+      })
+      .catch(err => {
+          alert("Failed to load JSON: " + err);
+          console.error(err);
+      });
+});
+
+function loadQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+    q.options.forEach(option => {
+        const btn = document.createElement("button");
+        btn.innerText = option;
+        btn.className = "option";
+        btn.onclick = () => selectOption(btn, option);
+        optionsDiv.appendChild(btn);
+    });
+}
+
+function selectOption(button, selected) {
+    const correct = quiz[currentQuestion].answer;
+    if(selected === correct){
+        score++;
+        button.classList.add("correct");
+        correctSound.play();
+    } else {
+        button.classList.add("wrong");
+        wrongSound.play();
+        Array.from(document.getElementById("options").children)
+            .forEach(btn => { if(btn.innerText === correct) btn.classList.add("correct"); });
+    }
+    setTimeout(() => {
+        currentQuestion++;
+        if(currentQuestion < quiz.length){
+            loadQuestion();
+        } else {
+            document.getElementById("question").innerText = "🎉 Quiz Finished! 🎉";
+            document.getElementById("options").innerHTML = "";
+            document.getElementById("score").innerText = `Your score: ${score} / ${quiz.length}`;
+        }
+    }, 800);
+}
+</script>
+
+</body>
+</html>
