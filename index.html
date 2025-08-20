@@ -1,118 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Cheerful Quiz App (URL Input)</title>
-<style>
-    body { 
-        font-family: 'Comic Sans MS', cursive, sans-serif; 
-        background: linear-gradient(120deg, #f6d365, #fda085); 
-        display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; 
+  <meta charset="UTF-8">
+  <title>Multi-Step Quiz App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 20px;
     }
-    .container { 
-        background: #fff; padding: 30px; border-radius: 20px; max-width: 600px; width: 90%; 
-        box-shadow: 0 8px 20px rgba(0,0,0,0.3); text-align: center; 
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    h2 { margin-bottom: 20px; color: #ff6f61; }
-    input { width: 90%; padding: 10px; margin-bottom: 20px; border-radius: 10px; border: 1px solid #ccc; font-size: 14px; }
-    button { padding: 12px 25px; font-size: 16px; border: none; border-radius: 10px; cursor: pointer; background: #ffdab9; transition: transform 0.2s; }
-    button:hover { transform: scale(1.05); background: #ffd700; }
-    .option { display: block; margin: 10px 0; width: 100%; }
-    .correct { background: #90ee90 !important; }
-    .wrong { background: #ff7f7f !important; }
-    #score { margin-top: 20px; font-weight: bold; font-size: 18px; color: #333; }
-</style>
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .question { font-size: 20px; margin-bottom: 15px; }
+    .options button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      background: #e7e7e7;
+      color: #000;
+    }
+    .options button:hover { background: #d6d6d6; }
+    .feedback {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container" id="urlStep">
-    <h2>Enter your Quiz JSON URL</h2>
-    <input type="text" id="jsonURL" placeholder="Paste your raw JSON URL here" />
-    <br>
-    <button id="startBtn">Start Quiz</button>
-</div>
+  <div class="card" id="app">
+    <h1>Welcome to the Quiz App</h1>
+    <p>Loading subjects...</p>
+  </div>
 
-<div class="container" id="quizStep" style="display:none;">
-    <h2 id="question">Question will appear here</h2>
-    <div id="options"></div>
-    <p id="score"></p>
-</div>
+  <script>
+    const MASTER_FILE = "https://gist.githubusercontent.com/ramyfouad397/7d4d72839a2a50146c671cf43328024d/raw/41c2290213e35c96e23c347e3cbe3a951f20af06/subjects.json";
 
-<audio id="correctSound" src="https://freesound.org/data/previews/320/320655_5260873-lq.mp3"></audio>
-<audio id="wrongSound" src="https://freesound.org/data/previews/331/331912_3248244-lq.mp3"></audio>
+    const app = document.getElementById("app");
+    let subjects = [], topics = [], quizzes = [], questions = [];
+    let currentQuestion = 0, score = 0;
 
-<script>
-let quiz = [];
-let currentQuestion = 0;
-let score = 0;
-
-const correctSound = document.getElementById("correctSound");
-const wrongSound = document.getElementById("wrongSound");
-
-const urlStep = document.getElementById("urlStep");
-const quizStep = document.getElementById("quizStep");
-const startBtn = document.getElementById("startBtn");
-const jsonInput = document.getElementById("jsonURL");
-
-startBtn.addEventListener("click", () => {
-    const url = jsonInput.value.trim();
-    if(!url){
-        alert("Please enter a valid URL");
-        return;
+    async function loadJSON(url) {
+      const res = await fetch(url);
+      return await res.json();
     }
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-          if(!Array.isArray(data)) throw "JSON must be an array of questions";
-          quiz = data;
-          urlStep.style.display = "none";
-          quizStep.style.display = "block";
-          loadQuestion();
-      })
-      .catch(err => {
-          alert("Failed to load JSON: " + err);
-          console.error(err);
-      });
-});
 
-function loadQuestion() {
-    const q = quiz[currentQuestion];
-    document.getElementById("question").innerText = q.question;
-    const optionsDiv = document.getElementById("options");
-    optionsDiv.innerHTML = "";
-    q.options.forEach(option => {
+    async function init() {
+      const data = await loadJSON(MASTER_FILE);
+      subjects = data.subjects;
+      showSubjects();
+    }
+
+    function showSubjects() {
+      app.innerHTML = "<h2>Select a Subject</h2>";
+      subjects.forEach(sub => {
         const btn = document.createElement("button");
-        btn.innerText = option;
-        btn.className = "option";
-        btn.onclick = () => selectOption(btn, option);
-        optionsDiv.appendChild(btn);
-    });
-}
-
-function selectOption(button, selected) {
-    const correct = quiz[currentQuestion].answer;
-    if(selected === correct){
-        score++;
-        button.classList.add("correct");
-        correctSound.play();
-    } else {
-        button.classList.add("wrong");
-        wrongSound.play();
-        Array.from(document.getElementById("options").children)
-            .forEach(btn => { if(btn.innerText === correct) btn.classList.add("correct"); });
+        btn.textContent = sub.name;
+        btn.onclick = async () => {
+          topics = (await loadJSON(sub.file)).topics;
+          showTopics();
+        };
+        app.appendChild(btn);
+      });
     }
-    setTimeout(() => {
-        currentQuestion++;
-        if(currentQuestion < quiz.length){
-            loadQuestion();
-        } else {
-            document.getElementById("question").innerText = "🎉 Quiz Finished! 🎉";
-            document.getElementById("options").innerHTML = "";
-            document.getElementById("score").innerText = `Your score: ${score} / ${quiz.length}`;
-        }
-    }, 800);
-}
-</script>
 
+    function showTopics() {
+      app.innerHTML = "<h2>Select a Topic</h2>";
+      topics.forEach(topic => {
+        const btn = document.createElement("button");
+        btn.textContent = topic.name;
+        btn.onclick = async () => {
+          quizzes = (await loadJSON(topic.file)).quizzes;
+          showQuizzes();
+        };
+        app.appendChild(btn);
+      });
+    }
+
+    function showQuizzes() {
+      app.innerHTML = "<h2>Select a Quiz</h2>";
+      quizzes.forEach(quiz => {
+        const btn = document.createElement("button");
+        btn.textContent = quiz.name;
+        btn.onclick = async () => {
+          questions = (await loadJSON(quiz.file)).questions;
+          startQuiz();
+        };
+        app.appendChild(btn);
+      });
+    }
+
+    function startQuiz() {
+      currentQuestion = 0;
+      score = 0;
+      showQuestion();
+    }
+
+    function showQuestion() {
+      if (currentQuestion >= questions.length) {
+        showResults();
+        return;
+      }
+
+      const q = questions[currentQuestion];
+      app.innerHTML = `
+        <div class="question">Q${currentQuestion+1}: ${q.question}</div>
+        <div class="options"></div>
+        <div class="feedback" id="feedback"></div>
+      `;
+
+      const optionsDiv = app.querySelector(".options");
+      q.options.forEach(opt => {
+        const btn = document.createElement("button");
+        btn.textContent = opt;
+        btn.onclick = () => checkAnswer(opt, q.answer, q.explanation);
+        optionsDiv.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(selected, correct, explanation) {
+      const feedback = document.getElementById("feedback");
+      if (selected === correct) {
+        feedback.textContent = "✅ Correct! " + explanation;
+        score++;
+      } else {
+        feedback.textContent = "❌ Wrong! " + explanation;
+      }
+      setTimeout(() => {
+        currentQuestion++;
+        showQuestion();
+      }, 2000);
+    }
+
+    function showResults() {
+      app.innerHTML = `
+        <h2>Quiz Completed!</h2>
+        <p>Your score: ${score} / ${questions.length}</p>
+        <button onclick="init()">Back to Subjects</button>
+      `;
+    }
+
+    // Start
+    init();
+  </script>
 </body>
 </html>
