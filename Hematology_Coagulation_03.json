@@ -1,0 +1,222 @@
+[
+  {
+    "question": "What is Disseminated Intravascular Coagulation (DIC)?",
+    "options": [
+      "A hereditary bleeding disorder",
+      "A condition characterized by systemic activation of coagulation leading to both thrombosis and bleeding",
+      "A platelet deficiency disorder",
+      "A vitamin K deficiency disorder"
+    ],
+    "answer": "A condition characterized by systemic activation of coagulation leading to both thrombosis and bleeding",
+    "explanation": "DIC is an acquired syndrome where widespread clotting depletes platelets and coagulation factors, paradoxically causing both thrombosis and bleeding."
+  },
+  {
+    "question": "Which of the following is a common trigger for DIC?",
+    "options": [
+      "Sepsis",
+      "Asthma",
+      "Diabetes Mellitus",
+      "Hypertension"
+    ],
+    "answer": "Sepsis",
+    "explanation": "Sepsis, especially from gram-negative bacteria, is one of the most common causes of DIC due to massive release of inflammatory cytokines that trigger coagulation."
+  },
+  {
+    "question": "What laboratory finding is most suggestive of DIC?",
+    "options": [
+      "Increased platelet count",
+      "Normal PT and aPTT",
+      "Prolonged PT and aPTT with low fibrinogen",
+      "High hemoglobin level"
+    ],
+    "answer": "Prolonged PT and aPTT with low fibrinogen",
+    "explanation": "In DIC, there is consumption of clotting factors and fibrinogen, leading to prolonged PT/aPTT and hypofibrinogenemia."
+  },
+  {
+    "question": "Which of the following is elevated in DIC?",
+    "options": [
+      "Fibrinogen",
+      "Platelet count",
+      "D-dimer",
+      "Hemoglobin"
+    ],
+    "answer": "D-dimer",
+    "explanation": "D-dimer, a fibrin degradation product, is elevated in DIC due to widespread fibrin clot breakdown."
+  },
+  {
+    "question": "Which clinical finding is characteristic of acute DIC?",
+    "options": [
+      "Isolated thrombocytosis",
+      "Petechiae and ecchymosis with bleeding",
+      "Splenomegaly only",
+      "Chronic anemia only"
+    ],
+    "answer": "Petechiae and ecchymosis with bleeding",
+    "explanation": "Acute DIC often presents with bleeding manifestations such as petechiae, purpura, and mucosal bleeding."
+  },
+  {
+    "question": "Which is the best initial test to suspect DIC?",
+    "options": [
+      "Serum iron",
+      "Coagulation profile (PT, aPTT, fibrinogen, platelets)",
+      "Liver biopsy",
+      "Bone marrow aspiration"
+    ],
+    "answer": "Coagulation profile (PT, aPTT, fibrinogen, platelets)",
+    "explanation": "A coagulation panel is the best initial step, revealing prolonged clotting times, low platelets, and decreased fibrinogen."
+  },
+  {
+    "question": "What is the hallmark of chronic DIC?",
+    "options": [
+      "Predominant bleeding tendency",
+      "Predominant thrombotic manifestations",
+      "Normal coagulation studies",
+      "Low D-dimer levels"
+    ],
+    "answer": "Predominant thrombotic manifestations",
+    "explanation": "Chronic DIC is often seen in malignancy and is dominated by thrombosis rather than bleeding."
+  },
+  {
+    "question": "Which of the following is NOT typically a cause of DIC?",
+    "options": [
+      "Obstetric complications",
+      "Severe trauma",
+      "Liver cirrhosis",
+      "Snake venom envenomation"
+    ],
+    "answer": "Liver cirrhosis",
+    "explanation": "Liver cirrhosis causes coagulopathy but not DIC; DIC is more associated with acute systemic triggers such as trauma, obstetric events, sepsis, and snake venom."
+  },
+  {
+    "question": "How does DIC affect platelet count?",
+    "options": [
+      "Platelet count increases significantly",
+      "Platelet count decreases due to consumption",
+      "Platelet count remains normal",
+      "Platelet function improves"
+    ],
+    "answer": "Platelet count decreases due to consumption",
+    "explanation": "Platelets are consumed in the formation of widespread microthrombi, leading to thrombocytopenia."
+  },
+  {
+    "question": "Which organ system is most commonly affected in severe DIC?",
+    "options": [
+      "Lungs",
+      "Skin",
+      "Kidneys",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "Microthrombi in DIC can impair perfusion of multiple organs including kidneys, lungs, brain, and skin."
+  },
+  {
+    "question": "What is the cornerstone of DIC management?",
+    "options": [
+      "Vitamin K supplementation",
+      "Treating the underlying cause",
+      "Bone marrow transplant",
+      "Plasmapheresis"
+    ],
+    "answer": "Treating the underlying cause",
+    "explanation": "DIC is a secondary condition, so addressing the underlying cause (such as infection or obstetric complication) is essential."
+  },
+  {
+    "question": "In bleeding DIC, which blood product is most appropriate?",
+    "options": [
+      "Fresh frozen plasma (FFP)",
+      "Packed red blood cells only",
+      "Iron supplementation",
+      "Cryoprecipitate only"
+    ],
+    "answer": "Fresh frozen plasma (FFP)",
+    "explanation": "FFP replenishes clotting factors and is used in bleeding DIC with prolonged PT/aPTT."
+  },
+  {
+    "question": "What role does cryoprecipitate play in DIC treatment?",
+    "options": [
+      "Provides platelet support",
+      "Replaces fibrinogen",
+      "Replaces vitamin K",
+      "Inhibits thrombin"
+    ],
+    "answer": "Replaces fibrinogen",
+    "explanation": "Cryoprecipitate is rich in fibrinogen and is used when fibrinogen levels drop below 100 mg/dL."
+  },
+  {
+    "question": "When should platelet transfusion be given in DIC?",
+    "options": [
+      "Always, regardless of platelet count",
+      "When platelet count is <50,000/μL with bleeding or prior to invasive procedures",
+      "When platelet count is >100,000/μL",
+      "Never"
+    ],
+    "answer": "When platelet count is <50,000/μL with bleeding or prior to invasive procedures",
+    "explanation": "Platelets are transfused in bleeding DIC patients when counts fall below 50,000/μL."
+  },
+  {
+    "question": "Which coagulation inhibitor may be considered in severe thrombotic DIC?",
+    "options": [
+      "Vitamin C",
+      "Heparin",
+      "Aspirin",
+      "Warfarin"
+    ],
+    "answer": "Heparin",
+    "explanation": "Heparin may be considered in patients with predominantly thrombotic DIC, especially in chronic forms related to malignancy."
+  },
+  {
+    "question": "What is the prognosis of acute fulminant DIC?",
+    "options": [
+      "Usually self-limiting",
+      "Associated with high mortality if untreated",
+      "Always benign",
+      "Completely reversible without treatment"
+    ],
+    "answer": "Associated with high mortality if untreated",
+    "explanation": "Acute DIC, particularly in sepsis or obstetric catastrophes, can rapidly progress to multiorgan failure and death."
+  },
+  {
+    "question": "Which scoring system is commonly used to diagnose DIC?",
+    "options": [
+      "APGAR score",
+      "ISTH scoring system",
+      "GCS score",
+      "Child-Pugh score"
+    ],
+    "answer": "ISTH scoring system",
+    "explanation": "The International Society on Thrombosis and Haemostasis (ISTH) scoring system is used for diagnosing overt DIC."
+  },
+  {
+    "question": "Which fibrinogen level strongly supports a diagnosis of DIC?",
+    "options": [
+      ">300 mg/dL",
+      "200–300 mg/dL",
+      "<100 mg/dL",
+      "Normal levels"
+    ],
+    "answer": "<100 mg/dL",
+    "explanation": "Low fibrinogen (<100 mg/dL) is a characteristic finding in acute DIC."
+  },
+  {
+    "question": "Which population is particularly at risk for obstetric DIC?",
+    "options": [
+      "Women with iron deficiency",
+      "Women with preeclampsia, placental abruption, or retained dead fetus",
+      "Women with hypothyroidism",
+      "Women with gestational diabetes"
+    ],
+    "answer": "Women with preeclampsia, placental abruption, or retained dead fetus",
+    "explanation": "These obstetric emergencies are strong triggers for acute DIC."
+  },
+  {
+    "question": "Which description best summarizes the pathophysiology of DIC?",
+    "options": [
+      "Isolated platelet destruction",
+      "Localized fibrin clot formation",
+      "Systemic activation of coagulation and fibrinolysis",
+      "Genetic mutation of clotting factors"
+    ],
+    "answer": "Systemic activation of coagulation and fibrinolysis",
+    "explanation": "DIC involves uncontrolled systemic activation of coagulation, leading to widespread fibrin deposition and simultaneous activation of fibrinolysis, causing bleeding."
+  }
+]
