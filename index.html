@@ -5,136 +5,123 @@
   <title>Quiz App</title>
   <style>
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1abc9c, #3498db);
       margin: 0;
       padding: 0;
-      background: #f4f6f9;
-      color: #333;
-      text-align: center;
-    }
-    h1 {
-      background: #2c3e50;
-      color: white;
-      margin: 0;
-      padding: 15px;
-    }
-    h2, h3 {
-      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      color: #fff;
     }
     #app {
-      max-width: 600px;
-      margin: auto;
+      background: #ffffffdd;
+      color: #333;
       padding: 20px;
+      border-radius: 12px;
+      width: 95%;
+      max-width: 500px;
+      margin-top: 30px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    h1, h2, h3 {
+      margin-bottom: 15px;
     }
     .button {
       display: block;
-      width: 100%;
-      margin: 10px 0;
-      padding: 12px;
-      background: #3498db;
-      color: white;
+      margin: 10px auto;
+      padding: 12px 20px;
       border: none;
       border-radius: 8px;
-      cursor: pointer;
+      background-color: #3498db;
+      color: white;
       font-size: 16px;
-      transition: background 0.3s;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+      max-width: 300px;
     }
     .button:hover {
-      background: #2980b9;
-    }
-    .back-btn {
-      background: #e74c3c;
-    }
-    .back-btn:hover {
-      background: #c0392b;
+      background-color: #2980b9;
     }
     .question-card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       margin-bottom: 20px;
     }
     .explanation {
       margin-top: 15px;
       padding: 12px;
       border-radius: 8px;
-      background: #ecf0f1;
       font-size: 14px;
       text-align: left;
     }
     .correct {
-      background: #d4edda;
+      background-color: #d4edda;
       color: #155724;
     }
     .wrong {
-      background: #f8d7da;
+      background-color: #f8d7da;
       color: #721c24;
     }
     @media (max-width: 600px) {
-      #app { padding: 10px; }
-      .button { font-size: 14px; padding: 10px; }
+      #app {
+        width: 95%;
+        padding: 15px;
+      }
+      .button {
+        font-size: 14px;
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Quiz App</h1>
   <div id="app">Loading subjects...</div>
 
   <script>
-    let subjects = [];
-    let currentSubject = null;
-    let currentTopic = null;
-    let currentQuiz = null;
-
     async function loadJSON(file) {
       try {
-        const response = await fetch(file);
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-        return await response.json();
+        const res = await fetch(file);
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return await res.json();
       } catch (err) {
-        document.getElementById("app").innerHTML = `<p class="error">❌ Failed to load ${file}: ${err.message}</p>`;
+        document.getElementById("app").innerHTML = `<p style="color:red;">Failed to load ${file}</p>`;
         throw err;
       }
     }
 
     async function loadSubjects() {
-      subjects = await loadJSON("subjects.json");
-      showSubjects();
-    }
-
-    function showSubjects() {
+      const subjects = await loadJSON("subjects.json");
       const app = document.getElementById("app");
-      app.innerHTML = "<h2>Select a Subject</h2>";
+      app.innerHTML = "<h1>Quiz App</h1>";
       subjects.forEach(sub => {
         const btn = document.createElement("button");
         btn.className = "button";
         btn.innerText = sub.name;
-        btn.onclick = () => loadTopics(sub);
+        btn.onclick = () => loadTopics(sub.file);
         app.appendChild(btn);
       });
     }
 
-    async function loadTopics(subject) {
-      currentSubject = subject;
-      const topics = await loadJSON(subject.file);
+    async function loadTopics(file) {
+      const topics = await loadJSON(file);
       const app = document.getElementById("app");
-      app.innerHTML = `<h2>${subject.name}: Select Topic</h2>`;
+      app.innerHTML = "<h2>Select Topic</h2>";
       topics.forEach(topic => {
         const btn = document.createElement("button");
         btn.className = "button";
         btn.innerText = topic.name;
-        btn.onclick = () => loadQuizzes(topic);
+        btn.onclick = () => loadQuizzes(topic.file);
         app.appendChild(btn);
       });
-      addBackButton(showSubjects);
+      addBackButton(loadSubjects);
     }
 
-    async function loadQuizzes(topic) {
-      currentTopic = topic;
-      const quizzes = await loadJSON(topic.file);
+    async function loadQuizzes(file) {
+      const quizzes = await loadJSON(file);
       const app = document.getElementById("app");
-      app.innerHTML = `<h2>${topic.name}: Select Quiz</h2>`;
+      app.innerHTML = "<h2>Select Quiz</h2>";
       quizzes.forEach(quiz => {
         const btn = document.createElement("button");
         btn.className = "button";
@@ -142,11 +129,10 @@
         btn.onclick = () => startQuiz(quiz.file);
         app.appendChild(btn);
       });
-      addBackButton(() => loadTopics(currentSubject));
+      addBackButton(() => loadTopics(file));
     }
 
     async function startQuiz(file) {
-      currentQuiz = file;
       let questions;
       try {
         questions = await loadJSON(file);
@@ -164,26 +150,32 @@
                            <div class="question-card">
                              <p>Your score: <strong>${score} / ${questions.length}</strong></p>
                            </div>`;
-          addBackButton(() => loadQuizzes(currentTopic));
+          addBackButton(loadSubjects);
           return;
         }
 
         const q = questions[currentIndex];
         app.innerHTML = `
           <div class="question-card">
-            <h3>Q${currentIndex + 1}: ${q.question}</h3>
+            <h3>Q${currentIndex + 1} of ${questions.length}: ${q.question}</h3>
             <div id="options"></div>
             <div id="explanation"></div>
+            <div id="next-btn"></div>
           </div>
         `;
 
         const optionsDiv = document.getElementById("options");
+        const explanationDiv = document.getElementById("explanation");
+        const nextDiv = document.getElementById("next-btn");
+
         q.options.forEach(option => {
           const btn = document.createElement("button");
           btn.className = "button";
           btn.innerText = option;
           btn.onclick = () => {
-            const explanationDiv = document.getElementById("explanation");
+            // Disable all option buttons
+            [...optionsDiv.querySelectorAll("button")].forEach(b => b.disabled = true);
+
             if (option === q.answer) {
               score++;
               explanationDiv.className = "explanation correct";
@@ -192,23 +184,30 @@
               explanationDiv.className = "explanation wrong";
               explanationDiv.innerText = "❌ Wrong! " + (q.explanation || "");
             }
-            setTimeout(() => {
+
+            // Show Next button
+            const nextBtn = document.createElement("button");
+            nextBtn.className = "button";
+            nextBtn.innerText = "➡ Next Question";
+            nextBtn.onclick = () => {
               currentIndex++;
               showQuestion();
-            }, 2000);
+            };
+            nextDiv.appendChild(nextBtn);
           };
           optionsDiv.appendChild(btn);
         });
       }
+
       showQuestion();
     }
 
     function addBackButton(action) {
-      const btn = document.createElement("button");
-      btn.className = "button back-btn";
-      btn.innerText = "⬅ Back";
-      btn.onclick = action;
-      document.getElementById("app").appendChild(btn);
+      const backBtn = document.createElement("button");
+      backBtn.className = "button";
+      backBtn.innerText = "⬅ Back";
+      backBtn.onclick = action;
+      document.getElementById("app").appendChild(backBtn);
     }
 
     loadSubjects();
