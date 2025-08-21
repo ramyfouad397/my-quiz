@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Which precursor cell in the bone marrow gives rise to red blood cells?",
+    "options": ["Myeloblast", "Lymphoblast", "Pronormoblast", "Megakaryoblast"],
+    "answer": "Pronormoblast",
+    "explanation": "The earliest recognizable precursor of red blood cells in the bone marrow is the pronormoblast, which undergoes maturation to form mature erythrocytes."
+  },
+  {
+    "question": "Which test measures the percentage of red blood cells in whole blood?",
+    "options": ["Hemoglobin", "Hematocrit", "MCV", "RDW"],
+    "answer": "Hematocrit",
+    "explanation": "Hematocrit represents the percentage of blood volume occupied by red blood cells and is a key parameter in evaluating anemia or polycythemia."
+  },
+  {
+    "question": "What is the function of carbonic anhydrase in red blood cells?",
+    "options": ["Facilitates oxygen binding", "Converts CO2 to bicarbonate", "Prevents hemolysis", "Synthesizes hemoglobin"],
+    "answer": "Converts CO2 to bicarbonate",
+    "explanation": "Carbonic anhydrase catalyzes the conversion of carbon dioxide and water to carbonic acid, which then dissociates into bicarbonate and hydrogen ions for CO2 transport."
+  },
+  {
+    "question": "Which laboratory stain is used to identify reticulocytes?",
+    "options": ["Wright’s stain", "Leishman’s stain", "Supravital stain", "Gram stain"],
+    "answer": "Supravital stain",
+    "explanation": "Reticulocytes are immature red blood cells containing RNA, which can be visualized using supravital stains like new methylene blue."
+  },
+  {
+    "question": "Which red blood cell index measures the hemoglobin concentration in a given volume of packed RBCs?",
+    "options": ["MCV", "MCH", "MCHC", "RDW"],
+    "answer": "MCHC",
+    "explanation": "Mean corpuscular hemoglobin concentration (MCHC) reflects the average concentration of hemoglobin in a given volume of packed RBCs."
+  },
+  {
+    "question": "What is polychromasia in a peripheral blood smear?",
+    "options": ["Variation in size of RBCs", "Variation in color of RBCs", "Presence of fragmented cells", "Presence of nucleated RBCs"],
+    "answer": "Variation in color of RBCs",
+    "explanation": "Polychromasia refers to RBCs that appear bluish due to residual RNA, indicating increased reticulocyte release from the bone marrow."
+  },
+  {
+    "question": "Which condition is characterized by teardrop-shaped red blood cells (dacrocytes)?",
+    "options": ["Iron deficiency anemia", "Thalassemia", "Myelofibrosis", "Sickle cell anemia"],
+    "answer": "Myelofibrosis",
+    "explanation": "Dacrocytes (teardrop cells) are commonly seen in myelofibrosis and other infiltrative bone marrow disorders."
+  },
+  {
+    "question": "Which type of anemia shows Howell-Jolly bodies in red blood cells?",
+    "options": ["Iron deficiency anemia", "Megaloblastic anemia", "Sickle cell anemia", "Post-splenectomy anemia"],
+    "answer": "Post-splenectomy anemia",
+    "explanation": "Howell-Jolly bodies (nuclear remnants) are usually removed by the spleen. Their presence indicates splenic dysfunction or absence."
+  },
+  {
+    "question": "Which red blood cell abnormality is seen in glucose-6-phosphate dehydrogenase (G6PD) deficiency?",
+    "options": ["Spherocytes", "Bite cells", "Target cells", "Sickle cells"],
+    "answer": "Bite cells",
+    "explanation": "In G6PD deficiency, oxidative damage produces Heinz bodies, which are removed by splenic macrophages, leaving 'bite cells.'"
+  },
+  {
+    "question": "Which disorder is associated with basophilic stippling in red blood cells?",
+    "options": ["Iron deficiency anemia", "Lead poisoning", "Vitamin B12 deficiency", "Hereditary spherocytosis"],
+    "answer": "Lead poisoning",
+    "explanation": "Basophilic stippling represents ribosomal RNA aggregates and is often seen in lead poisoning and thalassemia."
+  },
+  {
+    "question": "What is the significance of increased red cell distribution width (RDW)?",
+    "options": ["Indicates hypochromia", "Indicates anisocytosis", "Indicates poikilocytosis", "Indicates polycythemia"],
+    "answer": "Indicates anisocytosis",
+    "explanation": "RDW measures the variation in red blood cell size. An increased RDW suggests anisocytosis, as seen in iron deficiency anemia."
+  },
+  {
+    "question": "Which RBC morphology is typically seen in liver disease?",
+    "options": ["Target cells", "Sickle cells", "Schistocytes", "Dacrocytes"],
+    "answer": "Target cells",
+    "explanation": "Target cells (codocytes) are often seen in liver disease, thalassemia, and post-splenectomy conditions."
+  },
+  {
+    "question": "What is the effect of folate deficiency on red blood cells?",
+    "options": ["Microcytosis", "Macrocytosis", "Hypochromia", "Hemolysis"],
+    "answer": "Macrocytosis",
+    "explanation": "Folate deficiency impairs DNA synthesis, leading to large (macrocytic) red blood cells, often with hypersegmented neutrophils."
+  },
+  {
+    "question": "Which RBC abnormality is classically associated with microangiopathic hemolytic anemia (MAHA)?",
+    "options": ["Spherocytes", "Schistocytes", "Target cells", "Sickle cells"],
+    "answer": "Schistocytes",
+    "explanation": "Schistocytes (fragmented RBCs) are seen in microangiopathic hemolytic anemia due to mechanical damage in small vessels."
+  },
+  {
+    "question": "Which red blood cell inclusion is made of denatured hemoglobin?",
+    "options": ["Heinz bodies", "Howell-Jolly bodies", "Basophilic stippling", "Cabot rings"],
+    "answer": "Heinz bodies",
+    "explanation": "Heinz bodies are aggregates of denatured hemoglobin seen in G6PD deficiency and after oxidative stress."
+  },
+  {
+    "question": "Which RBC parameter is most useful in differentiating iron deficiency anemia from thalassemia trait?",
+    "options": ["MCV", "MCHC", "RDW", "Reticulocyte count"],
+    "answer": "RDW",
+    "explanation": "RDW is typically increased in iron deficiency anemia but normal in thalassemia trait, helping to differentiate between the two."
+  },
+  {
+    "question": "What is the primary defect in paroxysmal nocturnal hemoglobinuria (PNH)?",
+    "options": ["Globin chain mutation", "GPI-anchor deficiency", "Iron deficiency", "Spectrin defect"],
+    "answer": "GPI-anchor deficiency",
+    "explanation": "PNH results from a mutation leading to deficiency of GPI-anchored proteins that protect RBCs from complement-mediated lysis."
+  },
+  {
+    "question": "Which RBC abnormality is most characteristic of hereditary elliptocytosis?",
+    "options": ["Spherocytes", "Elliptocytes", "Target cells", "Dacrocytes"],
+    "answer": "Elliptocytes",
+    "explanation": "Hereditary elliptocytosis is caused by defects in spectrin and related proteins, leading to elliptically shaped RBCs."
+  },
+  {
+    "question": "Which condition shows nucleated red blood cells in the peripheral blood?",
+    "options": ["Mild iron deficiency", "Bone marrow infiltration", "Polycythemia vera", "G6PD deficiency"],
+    "answer": "Bone marrow infiltration",
+    "explanation": "Nucleated RBCs in peripheral blood suggest bone marrow stress or infiltration, such as in myelofibrosis or severe anemia."
+  },
+  {
+    "question": "What is anisopoikilocytosis?",
+    "options": ["Variation in RBC size only", "Variation in RBC shape only", "Variation in both size and shape", "Normal RBC morphology"],
+    "answer": "Variation in both size and shape",
+    "explanation": "Anisopoikilocytosis describes variation in both RBC size (anisocytosis) and shape (poikilocytosis), commonly seen in severe anemias."
+  }
+]
