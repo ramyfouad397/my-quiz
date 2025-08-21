@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Which organ is primarily responsible for removing old or damaged red blood cells from circulation?",
+    "options": ["Liver", "Spleen", "Kidney", "Bone marrow"],
+    "answer": "Spleen",
+    "explanation": "The spleen is known as the 'graveyard of RBCs' because it filters the blood and removes old, damaged, or misshapen RBCs. The liver also plays a minor role, but the spleen is the primary site."
+  },
+  {
+    "question": "What is the average lifespan of a normal red blood cell in human circulation?",
+    "options": ["60 days", "90 days", "120 days", "150 days"],
+    "answer": "120 days",
+    "explanation": "A normal red blood cell circulates for about 120 days before being removed by the spleen. This balance between production and removal maintains stable RBC counts."
+  },
+  {
+    "question": "Which protein in RBCs is responsible for oxygen transport?",
+    "options": ["Hemoglobin", "Myoglobin", "Albumin", "Ferritin"],
+    "answer": "Hemoglobin",
+    "explanation": "Hemoglobin binds oxygen in the lungs and releases it in tissues. Myoglobin is for muscle oxygen storage, while albumin and ferritin are not involved in oxygen transport."
+  },
+  {
+    "question": "What is the most common cause of microcytic hypochromic anemia?",
+    "options": ["Iron deficiency", "Vitamin B12 deficiency", "Folate deficiency", "Hemolysis"],
+    "answer": "Iron deficiency",
+    "explanation": "Iron deficiency leads to reduced hemoglobin production, causing red cells to be small (microcytic) and pale (hypochromic)."
+  },
+  {
+    "question": "Which stain is used to detect reticulocytes in blood?",
+    "options": ["Giemsa stain", "Wright’s stain", "Supravital stain", "H&E stain"],
+    "answer": "Supravital stain",
+    "explanation": "Reticulocytes contain residual RNA, which is visualized with supravital stains such as new methylene blue. Giemsa and Wright stains are used for morphology but not reticulocyte counting."
+  },
+  {
+    "question": "Which RBC abnormality is characteristically seen in hereditary spherocytosis?",
+    "options": ["Sickle cells", "Target cells", "Spherocytes", "Schistocytes"],
+    "answer": "Spherocytes",
+    "explanation": "In hereditary spherocytosis, RBCs lose membrane surface area, becoming spherical instead of biconcave. These cells are less flexible and destroyed by the spleen."
+  },
+  {
+    "question": "Which vitamin deficiency causes megaloblastic anemia due to impaired DNA synthesis?",
+    "options": ["Vitamin B12", "Vitamin C", "Vitamin K", "Vitamin D"],
+    "answer": "Vitamin B12",
+    "explanation": "Vitamin B12 deficiency causes impaired DNA synthesis, leading to large, immature red cells (megaloblasts). Folate deficiency can also cause megaloblastic anemia."
+  },
+  {
+    "question": "What type of red blood cell is typically seen in sickle cell disease?",
+    "options": ["Spherocyte", "Target cell", "Sickle cell", "Schistocyte"],
+    "answer": "Sickle cell",
+    "explanation": "In sickle cell disease, hemoglobin S polymerizes under low oxygen tension, causing RBCs to assume a sickle shape, which leads to vaso-occlusion and hemolysis."
+  },
+  {
+    "question": "What is the main function of 2,3-BPG (bisphosphoglycerate) in red blood cells?",
+    "options": ["Increase oxygen binding", "Decrease oxygen binding", "Store energy", "Produce ATP"],
+    "answer": "Decrease oxygen binding",
+    "explanation": "2,3-BPG binds hemoglobin and reduces its affinity for oxygen, facilitating oxygen release to tissues. Without 2,3-BPG, oxygen would remain too tightly bound to hemoglobin."
+  },
+  {
+    "question": "Which red blood cell index measures the average volume of a red blood cell?",
+    "options": ["MCV", "MCH", "MCHC", "RDW"],
+    "answer": "MCV",
+    "explanation": "MCV (Mean Corpuscular Volume) indicates the average size of RBCs. MCH is the average hemoglobin per cell, MCHC is hemoglobin concentration, and RDW measures variability in cell size."
+  },
+  {
+    "question": "Which RBC abnormality is commonly associated with G6PD deficiency after oxidative stress?",
+    "options": ["Bite cells", "Target cells", "Sickle cells", "Acanthocytes"],
+    "answer": "Bite cells",
+    "explanation": "In G6PD deficiency, oxidative stress leads to Heinz body formation, and the spleen removes these inclusions, leaving 'bite cells'."
+  },
+  {
+    "question": "Which condition is classically associated with basophilic stippling of RBCs?",
+    "options": ["Lead poisoning", "Iron deficiency anemia", "Vitamin B12 deficiency", "Malaria"],
+    "answer": "Lead poisoning",
+    "explanation": "Basophilic stippling is seen in lead poisoning due to impaired hemoglobin synthesis. It can also be seen in thalassemia but is classic for lead toxicity."
+  },
+  {
+    "question": "Which component of hemoglobin binds carbon monoxide with high affinity?",
+    "options": ["Heme iron", "Globin chains", "2,3-BPG", "Folic acid"],
+    "answer": "Heme iron",
+    "explanation": "Carbon monoxide binds strongly to the iron in the heme group of hemoglobin, displacing oxygen and leading to tissue hypoxia."
+  },
+  {
+    "question": "Which abnormal RBC shape is often seen in liver disease?",
+    "options": ["Acanthocytes", "Spherocytes", "Target cells", "Elliptocytes"],
+    "answer": "Target cells",
+    "explanation": "Target cells are commonly seen in liver disease and thalassemia due to altered lipid metabolism affecting the cell membrane."
+  },
+  {
+    "question": "Which laboratory test measures the average amount of hemoglobin per red blood cell?",
+    "options": ["MCV", "MCH", "MCHC", "RDW"],
+    "answer": "MCH",
+    "explanation": "MCH (Mean Corpuscular Hemoglobin) represents the average hemoglobin content in each red blood cell."
+  },
+  {
+    "question": "Which condition is most likely when schistocytes are seen on a blood smear?",
+    "options": ["Iron deficiency anemia", "Hemolytic anemia", "Megaloblastic anemia", "Aplastic anemia"],
+    "answer": "Hemolytic anemia",
+    "explanation": "Schistocytes (fragmented RBCs) are commonly seen in microangiopathic hemolytic anemia such as DIC, TTP, and HUS."
+  },
+  {
+    "question": "What is the normal range of hemoglobin concentration in adult males?",
+    "options": ["10–12 g/dL", "12–14 g/dL", "13–17 g/dL", "15–19 g/dL"],
+    "answer": "13–17 g/dL",
+    "explanation": "Normal hemoglobin in adult males is 13–17 g/dL. Females have a slightly lower range due to menstrual blood loss and hormonal factors."
+  },
+  {
+    "question": "Which enzyme deficiency leads to impaired protection of RBCs against oxidative stress?",
+    "options": ["Pyruvate kinase", "G6PD", "Adenosine deaminase", "Hexokinase"],
+    "answer": "G6PD",
+    "explanation": "G6PD deficiency prevents RBCs from generating enough NADPH to neutralize oxidative stress, leading to hemolysis after exposure to oxidant drugs or fava beans."
+  },
+  {
+    "question": "Which disease is characterized by defective synthesis of globin chains?",
+    "options": ["Sickle cell disease", "Thalassemia", "Hereditary spherocytosis", "Aplastic anemia"],
+    "answer": "Thalassemia",
+    "explanation": "Thalassemia results from defective synthesis of alpha or beta globin chains, leading to anemia and abnormal RBC morphology."
+  },
+  {
+    "question": "Which RBC abnormality is strongly associated with megaloblastic anemia?",
+    "options": ["Macrocytosis", "Microcytosis", "Target cells", "Spherocytes"],
+    "answer": "Macrocytosis",
+    "explanation": "Megaloblastic anemia from folate or vitamin B12 deficiency causes impaired DNA synthesis, leading to large RBCs (macrocytosis)."
+  }
+]
