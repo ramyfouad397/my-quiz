@@ -3,136 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <title>Quiz App</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    select, button { margin: 5px; padding: 5px; }
+  </style>
 </head>
 <body>
   <h1>Quiz App</h1>
-  <div id="options">Loading subjects...</div>
-  <div id="quiz"></div>
+  <div>
+    <label>Subject: </label>
+    <select id="subject"></select>
+  </div>
+  <div>
+    <label>Topic: </label>
+    <select id="topic"></select>
+  </div>
+  <div>
+    <label>Quiz: </label>
+    <select id="quiz"></select>
+  </div>
+  <button onclick="startQuiz()">Start Quiz</button>
+
+  <div id="quiz-container"></div>
 
   <script>
-    const SUBJECTS_URL =
-      "https://gist.githubusercontent.com/ramyfouad397/7d4d72839a2a50146c671cf43328024d/raw/92ae246ae7f2367c50275ae3e98e39fb1fe1fb8c/subjects.txt";
+    let subjects = [], topics = [], quizzes = [];
+    let selectedSubjectFile = "", selectedTopicFile = "", selectedQuizFile = "";
 
-    const FALLBACK_SUBJECTS = [
-      {
-        "name": "Hematology",
-        "file": "https://gist.githubusercontent.com/ramyfouad397/381b483fdae128327e1af1846cc8862b/raw/545af35a25f49138a5d5144f14c223d6cea8b6f4/hematology_subject.txt"
-      }
-    ];
-
-    async function loadSubjects() {
-      try {
-        console.log("Fetching subjects from:", SUBJECTS_URL);
-        const res = await fetch(SUBJECTS_URL);
-        const text = await res.text();
-        console.log("Subjects raw response:", text);
-
-        let subjects = JSON.parse(text);
-        renderSubjects(subjects);
-      } catch (err) {
-        console.error("Subjects load error:", err);
-        document.getElementById("options").innerHTML =
-          "<p style='color:red'>❌ Error loading subjects, using fallback.</p>";
-        renderSubjects(FALLBACK_SUBJECTS);
-      }
+    async function loadJSON(file) {
+      const res = await fetch(file);
+      return await res.json();
     }
 
-    function renderSubjects(subjects) {
-      const container = document.getElementById("options");
-      container.innerHTML = "<h2>Select a Subject</h2>";
-      subjects.forEach(subject => {
-        const btn = document.createElement("button");
-        btn.textContent = subject.name;
-        btn.onclick = () => loadTopics(subject);
-        container.appendChild(btn);
+    async function init() {
+      subjects = await loadJSON("subjects.json");
+      const subjectSelect = document.getElementById("subject");
+      subjectSelect.innerHTML = subjects.map((s,i)=>`<option value="${i}">${s.name}</option>`).join("");
+      subjectSelect.onchange = loadTopics;
+      loadTopics();
+    }
+
+    async function loadTopics() {
+      const idx = document.getElementById("subject").value;
+      selectedSubjectFile = subjects[idx].file;
+      topics = await loadJSON(selectedSubjectFile);
+      const topicSelect = document.getElementById("topic");
+      topicSelect.innerHTML = topics.map((t,i)=>`<option value="${i}">${t.name}</option>`).join("");
+      topicSelect.onchange = loadQuizzes;
+      loadQuizzes();
+    }
+
+    async function loadQuizzes() {
+      const idx = document.getElementById("topic").value;
+      selectedTopicFile = topics[idx].file;
+      quizzes = await loadJSON(selectedTopicFile);
+      const quizSelect = document.getElementById("quiz");
+      quizSelect.innerHTML = quizzes.map((q,i)=>`<option value="${i}">${q.name}</option>`).join("");
+    }
+
+    async function startQuiz() {
+      const idx = document.getElementById("quiz").value;
+      selectedQuizFile = quizzes[idx].file;
+      const questions = await loadJSON(selectedQuizFile);
+
+      let container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questions.forEach((q, i) => {
+        let div = document.createElement("div");
+        div.innerHTML = `<p><b>Q${i+1}:</b> ${q.question}</p>` +
+          q.options.map(opt => `<label><input type="radio" name="q${i}" value="${opt}">${opt}</label><br>`).join("");
+        container.appendChild(div);
       });
     }
 
-    async function loadTopics(subject) {
-      try {
-        console.log("Loading topics from:", subject.file);
-        const res = await fetch(subject.file);
-        const text = await res.text();
-        console.log("Topics raw response:", text);
-
-        let topics = JSON.parse(text);
-        const container = document.getElementById("options");
-        container.innerHTML = `<h2>${subject.name}: Select Topic</h2>`;
-        topics.forEach(topic => {
-          const btn = document.createElement("button");
-          btn.textContent = topic.name;
-          btn.onclick = () => loadQuizzes(topic);
-          container.appendChild(btn);
-        });
-      } catch (err) {
-        document.getElementById("options").innerHTML =
-          "<p style='color:red'>❌ Error loading topics.</p>";
-        console.error("Topics load error:", err);
-      }
-    }
-
-    async function loadQuizzes(topic) {
-      try {
-        console.log("Loading quizzes from:", topic.file);
-        const res = await fetch(topic.file);
-        const text = await res.text();
-        console.log("Quizzes raw response:", text);
-
-        let quizzes = JSON.parse(text);
-        const container = document.getElementById("options");
-        container.innerHTML = `<h2>${topic.name}: Select Quiz</h2>`;
-        quizzes.forEach((quiz, idx) => {
-          const btn = document.createElement("button");
-          btn.textContent = `Quiz ${idx + 1}`;
-          btn.onclick = () => startQuiz(quiz.file);
-          container.appendChild(btn);
-        });
-      } catch (err) {
-        document.getElementById("options").innerHTML =
-          "<p style='color:red'>❌ Error loading quizzes.</p>";
-        console.error("Quizzes load error:", err);
-      }
-    }
-
-    async function startQuiz(url) {
-      try {
-        console.log("Loading quiz from:", url);
-        const res = await fetch(url);
-        const text = await res.text();
-        console.log("Quiz raw response:", text);
-
-        let questions = JSON.parse(text);
-        const quizDiv = document.getElementById("quiz");
-        quizDiv.innerHTML = "";
-
-        let qIndex = 0;
-        function showQuestion() {
-          if (qIndex >= questions.length) {
-            quizDiv.innerHTML = "<h3>Quiz Finished!</h3>";
-            return;
-          }
-          const q = questions[qIndex];
-          quizDiv.innerHTML = `<h3>${q.question}</h3>`;
-          q.options.forEach(opt => {
-            const btn = document.createElement("button");
-            btn.textContent = opt;
-            btn.onclick = () => {
-              alert(opt === q.answer ? "✅ Correct!" : "❌ Wrong! " + q.explanation);
-              qIndex++;
-              showQuestion();
-            };
-            quizDiv.appendChild(btn);
-          });
-        }
-        showQuestion();
-      } catch (err) {
-        document.getElementById("quiz").innerHTML =
-          "<p style='color:red'>❌ Error loading quiz.</p>";
-        console.error("Quiz load error:", err);
-      }
-    }
-
-    loadSubjects();
+    init();
   </script>
 </body>
 </html>
