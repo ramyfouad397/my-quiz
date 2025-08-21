@@ -1,27 +1,122 @@
 [
   {
-    "question": "What is the normal lifespan of a red blood cell (RBC) in circulation?",
-    "options": ["60 days", "90 days", "120 days", "150 days"],
-    "answer": "120 days"
+    "question": "What is the primary function of red blood cells?",
+    "options": ["Carry oxygen", "Fight infection", "Clot blood", "Transport hormones"],
+    "answer": "Carry oxygen",
+    "explanation": "Red blood cells transport oxygen from the lungs to tissues using hemoglobin."
   },
   {
-    "question": "Which of the following is the main function of red blood cells?",
-    "options": ["Immune defense", "Oxygen transport", "Blood clotting", "Hormone secretion"],
-    "answer": "Oxygen transport"
+    "question": "Which protein allows red blood cells to carry oxygen?",
+    "options": ["Hemoglobin", "Albumin", "Fibrinogen", "Myosin"],
+    "answer": "Hemoglobin",
+    "explanation": "Hemoglobin binds oxygen in the lungs and releases it in tissues."
   },
   {
-    "question": "Which protein is responsible for binding oxygen in RBCs?",
-    "options": ["Albumin", "Hemoglobin", "Fibrinogen", "Myosin"],
-    "answer": "Hemoglobin"
+    "question": "Where are red blood cells produced?",
+    "options": ["Bone marrow", "Liver", "Spleen", "Kidney"],
+    "answer": "Bone marrow",
+    "explanation": "In adults, red blood cells are produced in the bone marrow, especially in flat bones."
   },
   {
-    "question": "Which nutrient is essential for hemoglobin synthesis?",
-    "options": ["Vitamin D", "Iron", "Calcium", "Potassium"],
-    "answer": "Iron"
+    "question": "What is the average lifespan of a red blood cell?",
+    "options": ["120 days", "30 days", "200 days", "10 days"],
+    "answer": "120 days",
+    "explanation": "Red cells circulate for about 120 days before being removed by the spleen."
   },
   {
-    "question": "What is the typical shape of a healthy RBC?",
-    "options": ["Spherical", "Biconcave disc", "Elliptical", "Rod-shaped"],
-    "answer": "Biconcave disc"
+    "question": "Which vitamin is essential for red blood cell production?",
+    "options": ["Vitamin B12", "Vitamin C", "Vitamin D", "Vitamin K"],
+    "answer": "Vitamin B12",
+    "explanation": "Vitamin B12 (and folate) are crucial for DNA synthesis in developing red cells."
+  },
+  {
+    "question": "What is the most common shape of healthy red blood cells?",
+    "options": ["Biconcave disc", "Spherical", "Oval", "Irregular"],
+    "answer": "Biconcave disc",
+    "explanation": "The biconcave shape increases surface area for oxygen exchange."
+  },
+  {
+    "question": "What condition results from low red blood cell count or hemoglobin?",
+    "options": ["Anemia", "Leukemia", "Thrombocytopenia", "Polycythemia"],
+    "answer": "Anemia",
+    "explanation": "Anemia is a reduction in red blood cells or hemoglobin, leading to fatigue and weakness."
+  },
+  {
+    "question": "Which hormone regulates red blood cell production?",
+    "options": ["Erythropoietin", "Insulin", "Cortisol", "Thyroxine"],
+    "answer": "Erythropoietin",
+    "explanation": "Erythropoietin (from kidneys) stimulates bone marrow to produce red cells."
+  },
+  {
+    "question": "What element is essential in hemoglobin for oxygen binding?",
+    "options": ["Iron", "Calcium", "Magnesium", "Zinc"],
+    "answer": "Iron",
+    "explanation": "Iron in hemoglobin binds oxygen molecules for transport."
+  },
+  {
+    "question": "Which disease is caused by abnormal hemoglobin leading to sickle-shaped red cells?",
+    "options": ["Sickle cell anemia", "Thalassemia", "Aplastic anemia", "Iron deficiency anemia"],
+    "answer": "Sickle cell anemia",
+    "explanation": "Sickle cell anemia is caused by a mutation in hemoglobin, distorting red cell shape."
+  },
+  {
+    "question": "What is the term for increased red blood cell mass?",
+    "options": ["Polycythemia", "Leukopenia", "Thrombocytosis", "Anemia"],
+    "answer": "Polycythemia",
+    "explanation": "Polycythemia is an abnormal increase in red cell mass, which can thicken blood."
+  },
+  {
+    "question": "Which organ removes old and damaged red blood cells?",
+    "options": ["Spleen", "Liver", "Kidney", "Lungs"],
+    "answer": "Spleen",
+    "explanation": "The spleen filters out old or damaged red blood cells from circulation."
+  },
+  {
+    "question": "What is the normal red blood cell count in adult males?",
+    "options": ["4.7–6.1 million/µL", "3.0–4.0 million/µL", "6.5–8.0 million/µL", "2.0–3.0 million/µL"],
+    "answer": "4.7–6.1 million/µL",
+    "explanation": "Normal RBC count in adult males ranges from about 4.7 to 6.1 million per microliter."
+  },
+  {
+    "question": "Which type of anemia is caused by iron deficiency?",
+    "options": ["Microcytic anemia", "Macrocytic anemia", "Normocytic anemia", "Hemolytic anemia"],
+    "answer": "Microcytic anemia",
+    "explanation": "Iron deficiency anemia leads to smaller (microcytic), pale (hypochromic) red cells."
+  },
+  {
+    "question": "What is the main function of carbonic anhydrase in red blood cells?",
+    "options": ["Transport CO2", "Bind oxygen", "Produce hemoglobin", "Generate ATP"],
+    "answer": "Transport CO2",
+    "explanation": "Carbonic anhydrase converts CO2 into bicarbonate for transport in blood."
+  },
+  {
+    "question": "Which red cell index measures the average size of red blood cells?",
+    "options": ["MCV", "MCH", "MCHC", "RDW"],
+    "answer": "MCV",
+    "explanation": "Mean Corpuscular Volume (MCV) indicates whether red cells are microcytic, normocytic, or macrocytic."
+  },
+  {
+    "question": "Which genetic disorder causes reduced or absent synthesis of globin chains?",
+    "options": ["Thalassemia", "Sickle cell anemia", "Hereditary spherocytosis", "G6PD deficiency"],
+    "answer": "Thalassemia",
+    "explanation": "Thalassemia is a group of inherited disorders with reduced globin chain production."
+  },
+  {
+    "question": "What does hematocrit measure?",
+    "options": ["Percentage of red blood cells in blood", "Oxygen saturation", "White cell count", "Plasma protein level"],
+    "answer": "Percentage of red blood cells in blood",
+    "explanation": "Hematocrit is the proportion of blood volume occupied by red blood cells."
+  },
+  {
+    "question": "Which deficiency causes megaloblastic anemia?",
+    "options": ["Vitamin B12 or folate deficiency", "Iron deficiency", "Vitamin K deficiency", "Protein deficiency"],
+    "answer": "Vitamin B12 or folate deficiency",
+    "explanation": "Megaloblastic anemia is due to defective DNA synthesis from lack of B12 or folate."
+  },
+  {
+    "question": "What blood parameter reflects the average hemoglobin content per red cell?",
+    "options": ["MCH", "MCV", "RDW", "Platelet count"],
+    "answer": "MCH",
+    "explanation": "Mean Corpuscular Hemoglobin (MCH) shows the average hemoglobin per red cell."
   }
 ]
