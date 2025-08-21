@@ -1,0 +1,220 @@
+[
+  {
+    "question": "What is Dysfibrinogenemia?",
+    "options": [
+      "A deficiency in fibrinogen production",
+      "A qualitative defect in fibrinogen function",
+      "An increased level of fibrinogen in the blood",
+      "A complete absence of fibrinogen"
+    ],
+    "answer": "A qualitative defect in fibrinogen function",
+    "explanation": "Dysfibrinogenemia refers to an abnormal fibrinogen molecule that is produced in normal or near-normal amounts but functions abnormally in clot formation."
+  },
+  {
+    "question": "Which gene is most commonly mutated in congenital Dysfibrinogenemia?",
+    "options": [
+      "FGA",
+      "FGB",
+      "FGG",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "Congenital Dysfibrinogenemia is often associated with mutations in one of the three fibrinogen genes: FGA, FGB, or FGG."
+  },
+  {
+    "question": "Which laboratory test often shows prolonged results in Dysfibrinogenemia?",
+    "options": [
+      "Prothrombin time (PT)",
+      "Activated partial thromboplastin time (aPTT)",
+      "Thrombin time (TT)",
+      "Bleeding time"
+    ],
+    "answer": "Thrombin time (TT)",
+    "explanation": "Thrombin time is particularly prolonged in Dysfibrinogenemia due to impaired fibrin polymerization."
+  },
+  {
+    "question": "Which of the following is the most frequent clinical presentation of Dysfibrinogenemia?",
+    "options": [
+      "Severe bleeding",
+      "No symptoms (asymptomatic)",
+      "Thrombosis",
+      "Recurrent miscarriages"
+    ],
+    "answer": "No symptoms (asymptomatic)",
+    "explanation": "Many individuals with Dysfibrinogenemia remain asymptomatic, though some present with bleeding, thrombosis, or pregnancy complications."
+  },
+  {
+    "question": "Which diagnostic ratio is useful in Dysfibrinogenemia diagnosis?",
+    "options": [
+      "Fibrinogen activity-to-antigen ratio",
+      "Prothrombin-to-antithrombin ratio",
+      "Platelet count-to-MCV ratio",
+      "PT-to-aPTT ratio"
+    ],
+    "answer": "Fibrinogen activity-to-antigen ratio",
+    "explanation": "A low activity-to-antigen ratio suggests qualitative abnormalities in fibrinogen, characteristic of Dysfibrinogenemia."
+  },
+  {
+    "question": "What is the inheritance pattern of congenital Dysfibrinogenemia?",
+    "options": [
+      "Autosomal dominant",
+      "Autosomal recessive",
+      "X-linked",
+      "Mitochondrial"
+    ],
+    "answer": "Autosomal dominant",
+    "explanation": "Most congenital Dysfibrinogenemia cases are inherited in an autosomal dominant pattern."
+  },
+  {
+    "question": "Which acquired condition can cause Dysfibrinogenemia?",
+    "options": [
+      "Cirrhosis",
+      "Diabetes mellitus",
+      "Iron deficiency anemia",
+      "Vitamin C deficiency"
+    ],
+    "answer": "Cirrhosis",
+    "explanation": "Acquired Dysfibrinogenemia is most often seen in liver disease, particularly cirrhosis, due to abnormal fibrinogen synthesis."
+  },
+  {
+    "question": "Which symptom is more commonly associated with Dysfibrinogenemia than with Afibrinogenemia?",
+    "options": [
+      "Mild bleeding",
+      "Excessive thrombosis",
+      "Delayed wound healing",
+      "Nosebleeds"
+    ],
+    "answer": "Excessive thrombosis",
+    "explanation": "Unlike afibrinogenemia, dysfibrinogenemia can paradoxically predispose patients to thrombosis due to abnormal fibrin clot formation."
+  },
+  {
+    "question": "Which of the following is a possible complication of Dysfibrinogenemia during pregnancy?",
+    "options": [
+      "Pre-eclampsia",
+      "Recurrent miscarriages",
+      "Gestational diabetes",
+      "Placenta previa"
+    ],
+    "answer": "Recurrent miscarriages",
+    "explanation": "Women with Dysfibrinogenemia may experience pregnancy complications such as recurrent miscarriages due to abnormal clotting."
+  },
+  {
+    "question": "Which treatment may be required in severe bleeding episodes in Dysfibrinogenemia?",
+    "options": [
+      "Fibrinogen concentrate",
+      "Heparin",
+      "Vitamin K",
+      "Warfarin"
+    ],
+    "answer": "Fibrinogen concentrate",
+    "explanation": "Replacement therapy with fibrinogen concentrate or cryoprecipitate is used in severe bleeding episodes."
+  },
+  {
+    "question": "Which is preferred for long-term monitoring of Dysfibrinogenemia patients?",
+    "options": [
+      "Fibrinogen antigen levels",
+      "Fibrinogen activity levels",
+      "D-dimer testing",
+      "Thrombin generation assay"
+    ],
+    "answer": "Fibrinogen activity levels",
+    "explanation": "Fibrinogen activity is key to understanding functional clotting capacity, unlike antigen levels that only measure quantity."
+  },
+  {
+    "question": "Which assay confirms Dysfibrinogenemia?",
+    "options": [
+      "Functional fibrinogen assay",
+      "Genetic sequencing of fibrinogen genes",
+      "Both A and B",
+      "None"
+    ],
+    "answer": "Both A and B",
+    "explanation": "Diagnosis requires both functional clotting assays and often genetic confirmation for congenital cases."
+  },
+  {
+    "question": "What type of fibrin clot abnormality is seen in Dysfibrinogenemia?",
+    "options": [
+      "Delayed polymerization",
+      "Increased fibrinolysis",
+      "Cross-linking defects",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "Dysfibrinogenemia clots may exhibit delayed polymerization, abnormal cross-linking, or increased lysis."
+  },
+  {
+    "question": "Which condition is most likely to coexist with acquired Dysfibrinogenemia?",
+    "options": [
+      "Chronic kidney disease",
+      "Liver cirrhosis",
+      "Diabetes mellitus",
+      "Leukemia"
+    ],
+    "answer": "Liver cirrhosis",
+    "explanation": "Abnormal fibrinogen molecules in acquired dysfibrinogenemia are most often due to liver dysfunction."
+  },
+  {
+    "question": "In Dysfibrinogenemia, which laboratory pattern is typical?",
+    "options": [
+      "Normal antigen, reduced activity",
+      "Reduced antigen, reduced activity",
+      "Normal antigen, normal activity",
+      "Increased antigen, reduced activity"
+    ],
+    "answer": "Normal antigen, reduced activity",
+    "explanation": "The hallmark pattern is normal fibrinogen antigen with reduced functional activity, reflecting qualitative defects."
+  },
+  {
+    "question": "What is the estimated prevalence of Dysfibrinogenemia?",
+    "options": [
+      "1 in 1,000",
+      "1 in 10,000",
+      "1 in 1,000,000",
+      "Unknown, rare disorder"
+    ],
+    "answer": "Unknown, rare disorder",
+    "explanation": "Dysfibrinogenemia is very rare, and its true prevalence remains uncertain."
+  },
+  {
+    "question": "Which form of Dysfibrinogenemia is more common?",
+    "options": [
+      "Congenital",
+      "Acquired"
+    ],
+    "answer": "Acquired",
+    "explanation": "Acquired Dysfibrinogenemia due to liver disease is more common than congenital genetic forms."
+  },
+  {
+    "question": "Which factor increases thrombosis risk in Dysfibrinogenemia patients?",
+    "options": [
+      "Prolonged PT",
+      "Abnormal fibrin structure",
+      "Decreased fibrinogen antigen",
+      "Increased platelet count"
+    ],
+    "answer": "Abnormal fibrin structure",
+    "explanation": "Defective fibrin formation may paradoxically predispose to thrombosis by producing unstable clots prone to embolization."
+  },
+  {
+    "question": "What is the primary clinical management strategy for asymptomatic patients?",
+    "options": [
+      "No treatment, observation",
+      "Daily anticoagulants",
+      "Prophylactic fibrinogen replacement",
+      "Liver transplantation"
+    ],
+    "answer": "No treatment, observation",
+    "explanation": "Asymptomatic Dysfibrinogenemia usually requires no intervention, with treatment reserved for clinical events."
+  },
+  {
+    "question": "Which laboratory finding helps differentiate Dysfibrinogenemia from Hypofibrinogenemia?",
+    "options": [
+      "Normal fibrinogen antigen in Dysfibrinogenemia",
+      "Low fibrinogen antigen in Hypofibrinogenemia",
+      "Both A and B",
+      "Neither"
+    ],
+    "answer": "Both A and B",
+    "explanation": "Hypofibrinogenemia shows decreased antigen and activity, while Dysfibrinogenemia shows normal antigen but low activity."
+  }
+]
