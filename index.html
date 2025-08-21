@@ -2,138 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz App</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-    }
-    .quiz-container {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 600px;
-      width: 100%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-    }
-    .options button {
-      display: block;
-      width: 100%;
-      margin: 6px 0;
-      padding: 10px;
-      border: none;
-      border-radius: 8px;
-      background: #eee;
-      cursor: pointer;
-      transition: background 0.2s;
-      font-size: 1rem;
-    }
-    .options button:hover {
-      background: #dcdcdc;
-    }
-    .explanation {
-      margin-top: 10px;
-      font-size: 0.95rem;
-      color: #444;
-    }
-    .score-container {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    /* ✅ Mobile responsiveness */
-    @media (max-width: 600px) {
-      body {
-        padding: 10px;
-      }
-      .quiz-container {
-        padding: 15px;
-      }
-      h2 {
-        font-size: 1rem;
-      }
-      .options button {
-        font-size: 0.9rem;
-        padding: 8px;
-      }
-    }
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .button { display: block; margin: 10px 0; padding: 10px; background: #3498db; color: white; border: none; cursor: pointer; border-radius: 5px; text-align: left; }
+    .button:hover { background: #2980b9; }
+    .back-btn { margin-top: 20px; background: #e74c3c; }
+    .error { color: red; font-weight: bold; margin: 20px 0; }
   </style>
 </head>
 <body>
-
-  <div class="quiz-container">
-    <h2 id="question">Loading question...</h2>
-    <div class="options" id="options"></div>
-    <div class="explanation" id="explanation"></div>
-    <div class="score-container" id="score"></div>
-  </div>
+  <h1>Quiz App</h1>
+  <div id="app">Loading subjects...</div>
 
   <script>
-    let currentQuestion = 0;
-    let score = 0;
-    let quizData = [];
+    let subjects = [];
+    let currentSubject = null;
+    let currentTopic = null;
+    let currentQuiz = null;
 
-    // Load quiz file
-    fetch("redcell_quiz1.json")
-      .then(res => res.json())
-      .then(data => {
-        quizData = data;
-        showQuestion();
+    async function loadJSON(file) {
+      try {
+        const response = await fetch(file);
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        return await response.json();
+      } catch (err) {
+        document.getElementById("app").innerHTML = `<p class="error">❌ Failed to load ${file}: ${err.message}</p>`;
+        throw err;
+      }
+    }
+
+    async function loadSubjects() {
+      subjects = await loadJSON("subjects.json");
+      showSubjects();
+    }
+
+    function showSubjects() {
+      const app = document.getElementById("app");
+      app.innerHTML = "<h2>Select a Subject</h2>";
+      subjects.forEach(sub => {
+        const btn = document.createElement("button");
+        btn.className = "button";
+        btn.innerText = sub.name;
+        btn.onclick = () => loadTopics(sub);
+        app.appendChild(btn);
       });
+    }
 
-    function showQuestion() {
-      if (currentQuestion < quizData.length) {
-        let q = quizData[currentQuestion];
-        document.getElementById("question").innerText = q.question;
-        document.getElementById("options").innerHTML = "";
-        document.getElementById("explanation").innerText = "";
+    async function loadTopics(subject) {
+      currentSubject = subject;
+      const topics = await loadJSON(subject.file);
+      const app = document.getElementById("app");
+      app.innerHTML = `<h2>${subject.name}: Select Topic</h2>`;
+      topics.forEach(topic => {
+        const btn = document.createElement("button");
+        btn.className = "button";
+        btn.innerText = topic.name;
+        btn.onclick = () => loadQuizzes(topic);
+        app.appendChild(btn);
+      });
+      addBackButton(showSubjects);
+    }
 
+    async function loadQuizzes(topic) {
+      currentTopic = topic;
+      const quizzes = await loadJSON(topic.file);
+      const app = document.getElementById("app");
+      app.innerHTML = `<h2>${topic.name}: Select Quiz</h2>`;
+      quizzes.forEach(quiz => {
+        const btn = document.createElement("button");
+        btn.className = "button";
+        btn.innerText = quiz.name;
+        btn.onclick = () => startQuiz(quiz.file);
+        app.appendChild(btn);
+      });
+      addBackButton(() => loadTopics(currentSubject));
+    }
+
+    async function startQuiz(file) {
+      currentQuiz = file;
+      let questions;
+      try {
+        questions = await loadJSON(file);
+      } catch (err) {
+        return; // error already shown by loadJSON
+      }
+
+      let currentIndex = 0;
+      let score = 0;
+      const app = document.getElementById("app");
+
+      function showQuestion() {
+        if (currentIndex >= questions.length) {
+          app.innerHTML = `<h2>Quiz Finished</h2><p>Your score: ${score} / ${questions.length}</p>`;
+          addBackButton(() => loadQuizzes(currentTopic));
+          return;
+        }
+        const q = questions[currentIndex];
+        app.innerHTML = `<h3>Q${currentIndex + 1}: ${q.question}</h3>`;
         q.options.forEach(option => {
-          let btn = document.createElement("button");
+          const btn = document.createElement("button");
+          btn.className = "button";
           btn.innerText = option;
-          btn.onclick = () => checkAnswer(option, q.answer, q.explanation);
-          document.getElementById("options").appendChild(btn);
+          btn.onclick = () => {
+            if (option === q.answer) {
+              score++;
+              alert("✅ Correct! " + (q.explanation || ""));
+            } else {
+              alert("❌ Wrong! " + (q.explanation || ""));
+            }
+            currentIndex++;
+            showQuestion();
+          };
+          app.appendChild(btn);
         });
-      } else {
-        showScore();
       }
+      showQuestion();
     }
 
-    function checkAnswer(selected, correct, explanation) {
-      let explanationBox = document.getElementById("explanation");
-      if (selected === correct) {
-        score++;
-        explanationBox.innerHTML = "✅ Correct! " + explanation;
-      } else {
-        explanationBox.innerHTML = "❌ Wrong! Correct answer: <b>" + correct + "</b><br>" + explanation;
-      }
-
-      setTimeout(() => {
-        currentQuestion++;
-        showQuestion();
-      }, 2000); // wait 2s before next question
+    function addBackButton(action) {
+      const btn = document.createElement("button");
+      btn.className = "button back-btn";
+      btn.innerText = "⬅ Back";
+      btn.onclick = action;
+      document.getElementById("app").appendChild(btn);
     }
 
-    function showScore() {
-      document.getElementById("question").innerText = "Quiz Finished!";
-      document.getElementById("options").innerHTML = "";
-      document.getElementById("explanation").innerText = "";
-      document.getElementById("score").innerHTML = "Your Score: " + score + " / " + quizData.length;
-    }
+    loadSubjects();
   </script>
-
 </body>
 </html>
