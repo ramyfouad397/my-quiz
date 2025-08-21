@@ -116,5 +116,27 @@
     // Run app
     loadSubjects();
   </script>
+  <script>
+  async function loadSubjects() {
+    try {
+      const res = await fetch("https://gist.githubusercontent.com/ramyfouad397/7d4d72839a2a50146c671cf43328024d/raw/92ae246ae7f2367c50275ae3e98e39fb1fe1fb8c/subjects.txt");
+      const subjects = await res.json();
+      const container = document.getElementById("options");
+      container.innerHTML = "";
+
+      subjects.forEach(subject => {
+        const btn = document.createElement("button");
+        btn.textContent = subject.name;
+        btn.onclick = () => loadTopics(subject);
+        container.appendChild(btn);
+      });
+    } catch (err) {
+      document.getElementById("options").innerHTML = "<p style='color:red'>Error loading subjects: " + err + "</p>";
+      console.error("Subjects load error:", err);
+    }
+  }
+</script>
+
 </body>
 </html>
+
