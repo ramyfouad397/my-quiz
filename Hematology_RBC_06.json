@@ -1,0 +1,122 @@
+[
+  {
+    "question": "What is the main function of red blood cells?",
+    "options": ["Carry oxygen", "Fight infections", "Produce antibodies", "Regulate blood pressure"],
+    "answer": "Carry oxygen",
+    "explanation": "The primary role of RBCs is to transport oxygen from the lungs to tissues and return carbon dioxide to the lungs."
+  },
+  {
+    "question": "Which enzyme in red blood cells helps convert CO2 into bicarbonate?",
+    "options": ["Catalase", "Carbonic anhydrase", "Glucose-6-phosphate dehydrogenase", "Peroxidase"],
+    "answer": "Carbonic anhydrase",
+    "explanation": "Carbonic anhydrase rapidly converts carbon dioxide to bicarbonate, aiding in acid-base balance and CO2 transport."
+  },
+  {
+    "question": "Which abnormal RBC shape is most associated with bone marrow infiltration (e.g., myelofibrosis)?",
+    "options": ["Spherocytes", "Dacrocytes (tear-drop cells)", "Target cells", "Stomatocytes"],
+    "answer": "Dacrocytes (tear-drop cells)",
+    "explanation": "Dacrocytes indicate bone marrow infiltration and are classically seen in myelofibrosis."
+  },
+  {
+    "question": "What is the normal range of hemoglobin for adult males?",
+    "options": ["8–10 g/dL", "10–12 g/dL", "13–17 g/dL", "18–22 g/dL"],
+    "answer": "13–17 g/dL",
+    "explanation": "Normal adult male hemoglobin is approximately 13–17 g/dL; below this is considered anemia."
+  },
+  {
+    "question": "What does the term poikilocytosis mean?",
+    "options": ["Variation in RBC size", "Variation in RBC shape", "Variation in both size and shape", "Presence of inclusions"],
+    "answer": "Variation in RBC shape",
+    "explanation": "Poikilocytosis refers to abnormal variation in RBC shape, such as ovalocytes, spherocytes, or schistocytes."
+  },
+  {
+    "question": "Which RBC abnormality is typically associated with G6PD deficiency?",
+    "options": ["Heinz bodies and bite cells", "Target cells", "Acanthocytes", "Sickle cells"],
+    "answer": "Heinz bodies and bite cells",
+    "explanation": "Oxidative damage in G6PD deficiency causes Heinz bodies, which are removed by splenic macrophages, leaving 'bite cells'."
+  },
+  {
+    "question": "Which type of hemoglobin is increased in patients with beta-thalassemia trait?",
+    "options": ["HbA", "HbA2", "HbF", "HbS"],
+    "answer": "HbA2",
+    "explanation": "Beta-thalassemia trait shows elevated HbA2 due to underproduction of beta chains."
+  },
+  {
+    "question": "Which laboratory marker reflects the iron storage level in the body?",
+    "options": ["Serum iron", "TIBC", "Ferritin", "Transferrin saturation"],
+    "answer": "Ferritin",
+    "explanation": "Ferritin is the best marker of body iron stores; low ferritin is highly suggestive of iron deficiency."
+  },
+  {
+    "question": "What is the typical MCV finding in iron deficiency anemia?",
+    "options": ["Microcytic", "Normocytic", "Macrocytic", "Variable"],
+    "answer": "Microcytic",
+    "explanation": "Iron deficiency anemia is usually microcytic (low MCV) due to reduced hemoglobin production."
+  },
+  {
+    "question": "Which condition is characterized by an increased reticulocyte count?",
+    "options": ["Aplastic anemia", "Iron deficiency anemia", "Hemolytic anemia", "Chronic kidney disease"],
+    "answer": "Hemolytic anemia",
+    "explanation": "Hemolysis stimulates the bone marrow to produce more reticulocytes in compensation."
+  },
+  {
+    "question": "What is the main function of haptoglobin?",
+    "options": ["Bind hemoglobin", "Carry iron", "Stimulate RBC production", "Prevent clotting"],
+    "answer": "Bind hemoglobin",
+    "explanation": "Haptoglobin binds free hemoglobin released during hemolysis, preventing kidney damage and iron loss."
+  },
+  {
+    "question": "Which blood smear finding is typical in lead poisoning?",
+    "options": ["Target cells", "Basophilic stippling", "Howell-Jolly bodies", "Heinz bodies"],
+    "answer": "Basophilic stippling",
+    "explanation": "Basophilic stippling of RBCs is a hallmark of lead poisoning due to impaired RNA degradation."
+  },
+  {
+    "question": "Which RBC abnormality is common in hereditary elliptocytosis?",
+    "options": ["Elliptocytes", "Spherocytes", "Target cells", "Bite cells"],
+    "answer": "Elliptocytes",
+    "explanation": "Hereditary elliptocytosis is caused by mutations in cytoskeletal proteins, leading to elliptical RBCs."
+  },
+  {
+    "question": "What is the main cause of anemia in chronic kidney disease?",
+    "options": ["Iron deficiency", "Vitamin B12 deficiency", "Low erythropoietin production", "Bone marrow failure"],
+    "answer": "Low erythropoietin production",
+    "explanation": "Kidneys produce erythropoietin, which stimulates RBC production; its deficiency causes anemia in CKD."
+  },
+  {
+    "question": "Which blood test measures the variability in red blood cell size?",
+    "options": ["MCV", "MCH", "RDW", "MCHC"],
+    "answer": "RDW",
+    "explanation": "Red cell distribution width (RDW) quantifies the degree of anisocytosis (variation in RBC size)."
+  },
+  {
+    "question": "Which RBC abnormality is strongly associated with microangiopathic hemolytic anemia (MAHA)?",
+    "options": ["Spherocytes", "Schistocytes", "Elliptocytes", "Dacrocytes"],
+    "answer": "Schistocytes",
+    "explanation": "Fragmented RBCs (schistocytes) are typical of MAHA, seen in conditions like TTP and DIC."
+  },
+  {
+    "question": "Which genetic defect causes sickle cell disease?",
+    "options": ["Deletion of alpha-globin gene", "Mutation in beta-globin gene", "Deficiency of G6PD", "Spectrin mutation"],
+    "answer": "Mutation in beta-globin gene",
+    "explanation": "Sickle cell disease results from a point mutation in the beta-globin gene producing hemoglobin S."
+  },
+  {
+    "question": "Which RBC inclusion is composed of denatured hemoglobin?",
+    "options": ["Heinz bodies", "Howell-Jolly bodies", "Pappenheimer bodies", "Cabot rings"],
+    "answer": "Heinz bodies",
+    "explanation": "Heinz bodies form when hemoglobin is denatured by oxidative stress, common in G6PD deficiency."
+  },
+  {
+    "question": "Which RBC abnormality is common in severe iron deficiency anemia?",
+    "options": ["Macrocytosis", "Target cells", "Hypochromic microcytic cells", "Spherocytes"],
+    "answer": "Hypochromic microcytic cells",
+    "explanation": "In severe iron deficiency, RBCs are small and pale due to reduced hemoglobin concentration."
+  },
+  {
+    "question": "Which RBC abnormality is strongly associated with thalassemia major?",
+    "options": ["Target cells and microcytosis", "Spherocytes", "Bite cells", "Elliptocytes"],
+    "answer": "Target cells and microcytosis",
+    "explanation": "Thalassemia major shows microcytic RBCs and target cells due to defective globin synthesis."
+  }
+]
