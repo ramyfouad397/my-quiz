@@ -1,0 +1,122 @@
+[
+  {
+    "question": "What is the primary function of red blood cells?",
+    "options": ["Transport oxygen", "Fight infections", "Produce antibodies", "Initiate blood clotting"],
+    "answer": "Transport oxygen",
+    "explanation": "Red blood cells (RBCs) transport oxygen from the lungs to tissues and return carbon dioxide to the lungs. They are not directly involved in immunity (antibodies) or clotting (platelets do that)."
+  },
+  {
+    "question": "Which component of hemoglobin binds oxygen?",
+    "options": ["Globin chain", "Heme group", "Iron atom (Fe²⁺)", "Porphyrin ring"],
+    "answer": "Iron atom (Fe²⁺)",
+    "explanation": "The iron atom (in the ferrous state, Fe²⁺) at the center of the heme group binds oxygen reversibly, allowing RBCs to transport oxygen effectively."
+  },
+  {
+    "question": "What is the average lifespan of a red blood cell in circulation?",
+    "options": ["30 days", "60 days", "90 days", "120 days"],
+    "answer": "120 days",
+    "explanation": "Normal RBCs live about 120 days in circulation. After that, they are removed by macrophages in the spleen and liver."
+  },
+  {
+    "question": "Which organ produces erythropoietin (EPO), the hormone regulating red blood cell production?",
+    "options": ["Liver", "Spleen", "Kidney", "Bone marrow"],
+    "answer": "Kidney",
+    "explanation": "The kidney produces erythropoietin (EPO) in response to hypoxia. EPO stimulates the bone marrow to produce more RBCs."
+  },
+  {
+    "question": "Which vitamin is essential for DNA synthesis in red blood cell production?",
+    "options": ["Vitamin A", "Vitamin B12", "Vitamin C", "Vitamin D"],
+    "answer": "Vitamin B12",
+    "explanation": "Vitamin B12 and folic acid are essential for DNA synthesis in erythropoiesis. Deficiency leads to megaloblastic anemia."
+  },
+  {
+    "question": "What happens to hemoglobin when RBCs are destroyed in the spleen?",
+    "options": ["Excreted in urine directly", "Converted to bilirubin", "Stored as glycogen", "Turned into platelets"],
+    "answer": "Converted to bilirubin",
+    "explanation": "When RBCs are destroyed, hemoglobin is broken down. The heme portion is converted into bilirubin, which is excreted in bile."
+  },
+  {
+    "question": "What is the normal shape of a red blood cell?",
+    "options": ["Spherical", "Biconcave disc", "Oval", "Irregular"],
+    "answer": "Biconcave disc",
+    "explanation": "RBCs are normally biconcave discs. This shape increases surface area for gas exchange and flexibility for passage through capillaries."
+  },
+  {
+    "question": "Which condition results from abnormal hemoglobin S formation?",
+    "options": ["Thalassemia", "Iron-deficiency anemia", "Sickle cell disease", "Hemolytic anemia"],
+    "answer": "Sickle cell disease",
+    "explanation": "Sickle cell disease is caused by a mutation in the beta-globin gene, leading to hemoglobin S that polymerizes and distorts RBCs into sickle shapes."
+  },
+  {
+    "question": "What is the main site of red blood cell production in adults?",
+    "options": ["Liver", "Bone marrow", "Spleen", "Kidney"],
+    "answer": "Bone marrow",
+    "explanation": "In adults, hematopoiesis (including RBC production) occurs mainly in the red bone marrow of flat bones (sternum, pelvis, ribs)."
+  },
+  {
+    "question": "What is the main abnormality in hereditary spherocytosis?",
+    "options": ["Abnormal hemoglobin", "Membrane protein defect", "Iron deficiency", "Vitamin B12 deficiency"],
+    "answer": "Membrane protein defect",
+    "explanation": "Hereditary spherocytosis is caused by defects in RBC membrane proteins (spectrin, ankyrin), leading to spherical, fragile RBCs."
+  },
+  {
+    "question": "Which of the following is a sign of hemolytic anemia?",
+    "options": ["Low reticulocyte count", "Jaundice", "High serum iron", "Low bilirubin"],
+    "answer": "Jaundice",
+    "explanation": "In hemolytic anemia, increased RBC destruction raises bilirubin levels, leading to jaundice and dark urine."
+  },
+  {
+    "question": "Which test is most useful to measure average red blood cell size?",
+    "options": ["Hemoglobin", "MCV", "MCHC", "RDW"],
+    "answer": "MCV",
+    "explanation": "Mean corpuscular volume (MCV) indicates average RBC size: microcytic (<80 fL), normocytic (80–100 fL), or macrocytic (>100 fL)."
+  },
+  {
+    "question": "What is the effect of iron deficiency on red blood cells?",
+    "options": ["Normocytic normochromic anemia", "Microcytic hypochromic anemia", "Macrocytic anemia", "Hemolysis"],
+    "answer": "Microcytic hypochromic anemia",
+    "explanation": "Iron deficiency results in smaller (microcytic), pale (hypochromic) RBCs due to reduced hemoglobin synthesis."
+  },
+  {
+    "question": "Which hemoglobin type is predominant in adults?",
+    "options": ["HbA (α2β2)", "HbA2 (α2δ2)", "HbF (α2γ2)", "HbS"],
+    "answer": "HbA (α2β2)",
+    "explanation": "Adult hemoglobin is mainly HbA (α2β2). HbA2 and HbF are minor fractions, while HbS is abnormal in sickle cell disease."
+  },
+  {
+    "question": "What happens to RBC production at high altitudes?",
+    "options": ["Decreases", "Remains constant", "Increases", "Stops completely"],
+    "answer": "Increases",
+    "explanation": "At high altitude, hypoxia stimulates the kidneys to release erythropoietin (EPO), which increases RBC production to improve oxygen delivery."
+  },
+  {
+    "question": "What is the role of 2,3-BPG in red blood cells?",
+    "options": ["Enhances oxygen binding", "Decreases oxygen affinity", "Converts CO2 to bicarbonate", "Prevents sickling"],
+    "answer": "Decreases oxygen affinity",
+    "explanation": "2,3-Bisphosphoglycerate (2,3-BPG) decreases hemoglobin’s oxygen affinity, facilitating oxygen release to tissues."
+  },
+  {
+    "question": "Which laboratory finding is expected in thalassemia?",
+    "options": ["High MCV", "Target cells", "Normal hemoglobin electrophoresis", "Low reticulocytes"],
+    "answer": "Target cells",
+    "explanation": "In thalassemia, defective globin chain synthesis leads to microcytosis and abnormal RBC morphology such as target cells."
+  },
+  {
+    "question": "Which enzyme deficiency causes hemolysis under oxidative stress?",
+    "options": ["Hexokinase deficiency", "G6PD deficiency", "Pyruvate kinase deficiency", "Lactate dehydrogenase deficiency"],
+    "answer": "G6PD deficiency",
+    "explanation": "G6PD deficiency reduces the ability of RBCs to handle oxidative stress, leading to hemolysis after triggers like fava beans or drugs."
+  },
+  {
+    "question": "Which type of bilirubin increases in hemolytic anemia?",
+    "options": ["Direct (conjugated)", "Indirect (unconjugated)", "Both increase equally", "No change"],
+    "answer": "Indirect (unconjugated)",
+    "explanation": "Excessive hemolysis produces more unconjugated bilirubin, overwhelming the liver’s conjugation capacity, causing jaundice."
+  },
+  {
+    "question": "What is rouleaux formation in red blood cells?",
+    "options": ["RBC clumping due to antibodies", "RBC stacking like coins", "Fragmented RBCs", "Sickle-shaped RBCs"],
+    "answer": "RBC stacking like coins",
+    "explanation": "Rouleaux formation occurs when RBCs stack like coins due to increased plasma proteins (e.g., in multiple myeloma)."
+  }
+]
