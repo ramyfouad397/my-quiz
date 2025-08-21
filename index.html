@@ -4,26 +4,60 @@
   <meta charset="UTF-8">
   <title>Quiz App</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    h1 { color: #333; }
-    button { margin: 5px; padding: 10px; }
-    #quiz { margin-top: 20px; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f9;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #888;
+      cursor: pointer;
+      background: #fff;
+    }
+    button:hover {
+      background: #e0e0e0;
+    }
+    .quiz-container {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+    }
   </style>
 </head>
 <body>
   <h1>Quiz App</h1>
   <div id="options">Loading subjects...</div>
-  <div id="quiz"></div>
+  <div id="quiz" class="quiz-container"></div>
 
   <script>
-    let currentSubject = null;
-    let currentTopic = null;
+    const SUBJECTS_URL =
+      "https://gist.githubusercontent.com/ramyfouad397/7d4d72839a2a50146c671cf43328024d/raw/92ae246ae7f2367c50275ae3e98e39fb1fe1fb8c/subjects.txt";
 
     // Load Subjects
     async function loadSubjects() {
       try {
-        const res = await fetch("https://gist.githubusercontent.com/ramyfouad397/7d4d72839a2a50146c671cf43328024d/raw/92ae246ae7f2367c50275ae3e98e39fb1fe1fb8c/subjects.txt");
-        const subjects = await res.json();
+        console.log("Fetching subjects from:", SUBJECTS_URL);
+
+        const res = await fetch(SUBJECTS_URL);
+        const text = await res.text();
+        console.log("Subjects raw response:", text);
+
+        let subjects;
+        try {
+          subjects = JSON.parse(text);
+        } catch (parseErr) {
+          throw new Error("JSON parse error: " + parseErr.message + "\nRaw text: " + text);
+        }
+
         const container = document.getElementById("options");
         container.innerHTML = "<h2>Select a Subject</h2>";
 
@@ -42,12 +76,21 @@
 
     // Load Topics
     async function loadTopics(subject) {
-      currentSubject = subject;
       try {
+        console.log("Loading topics for subject:", subject);
         const res = await fetch(subject.file);
-        const topics = await res.json();
+        const text = await res.text();
+        console.log("Topics raw response:", text);
+
+        let topics;
+        try {
+          topics = JSON.parse(text);
+        } catch (parseErr) {
+          throw new Error("JSON parse error in topics: " + parseErr.message + "\nRaw text: " + text);
+        }
+
         const container = document.getElementById("options");
-        container.innerHTML = `<h2>${subject.name}: Select a Topic</h2>`;
+        container.innerHTML = `<h2>${subject.name}: Select Topic</h2>`;
 
         topics.forEach(topic => {
           const btn = document.createElement("button");
@@ -64,17 +107,26 @@
 
     // Load Quizzes
     async function loadQuizzes(topic) {
-      currentTopic = topic;
       try {
+        console.log("Loading quizzes for topic:", topic);
         const res = await fetch(topic.file);
-        const quizzes = await res.json();
-        const container = document.getElementById("options");
-        container.innerHTML = `<h2>${topic.name}: Select a Quiz</h2>`;
+        const text = await res.text();
+        console.log("Quizzes raw response:", text);
 
-        quizzes.forEach(quiz => {
+        let quizzes;
+        try {
+          quizzes = JSON.parse(text);
+        } catch (parseErr) {
+          throw new Error("JSON parse error in quizzes: " + parseErr.message + "\nRaw text: " + text);
+        }
+
+        const container = document.getElementById("options");
+        container.innerHTML = `<h2>${topic.name}: Select Quiz</h2>`;
+
+        quizzes.forEach((quiz, idx) => {
           const btn = document.createElement("button");
-          btn.textContent = quiz.name;
-          btn.onclick = () => loadQuiz(quiz);
+          btn.textContent = `Quiz ${idx + 1}`;
+          btn.onclick = () => startQuiz(quiz.file);
           container.appendChild(btn);
         });
       } catch (err) {
@@ -84,17 +136,54 @@
       }
     }
 
-    // Load Questions
-    async function loadQuiz(quiz) {
+    // Start Quiz
+    async function startQuiz(url) {
       try {
-        const res = await fetch(quiz.file);
-        const questions = await res.json();
-        const container = document.getElementById("options");
-        container.innerHTML = `<h2>${quiz.name}</h2>`;
+        console.log("Loading quiz from:", url);
+        const res = await fetch(url);
+        const text = await res.text();
+        console.log("Quiz raw response:", text);
+
+        let questions;
+        try {
+          questions = JSON.parse(text);
+        } catch (parseErr) {
+          throw new Error("JSON parse error in quiz: " + parseErr.message + "\nRaw text: " + text);
+        }
+
         const quizDiv = document.getElementById("quiz");
         quizDiv.innerHTML = "";
 
-        let index = 0;
+        let qIndex = 0;
         function showQuestion() {
-          if (index >= questions.length) {
-            quizDiv.innerHTML = "<h3>🎉 Quiz Completed!</h3>";
+          if (qIndex >= questions.length) {
+            quizDiv.innerHTML = "<h3>Quiz Finished!</h3>";
+            return;
+          }
+
+          const q = questions[qIndex];
+          quizDiv.innerHTML = `<h3>${q.question}</h3>`;
+          q.options.forEach(opt => {
+            const btn = document.createElement("button");
+            btn.textContent = opt;
+            btn.onclick = () => {
+              alert(opt === q.answer ? "✅ Correct!" : "❌ Wrong! " + q.explanation);
+              qIndex++;
+              showQuestion();
+            };
+            quizDiv.appendChild(btn);
+          });
+        }
+        showQuestion();
+      } catch (err) {
+        document.getElementById("quiz").innerHTML =
+          "<p style='color:red'>❌ Error loading quiz: " + err + "</p>";
+        console.error("Quiz load error:", err);
+      }
+    }
+
+    // Start App
+    loadSubjects();
+  </script>
+</body>
+</html>
