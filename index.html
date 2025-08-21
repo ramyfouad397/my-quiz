@@ -3,95 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <title>Quiz App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background: #f4f4f9;
-    }
-    h1, h2 {
-      color: #333;
-    }
-    button {
-      margin: 5px;
-      padding: 10px 15px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #888;
-      cursor: pointer;
-      background: #fff;
-    }
-    button:hover {
-      background: #e0e0e0;
-    }
-    .quiz-container {
-      margin-top: 20px;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #fff;
-    }
-  </style>
 </head>
 <body>
   <h1>Quiz App</h1>
   <div id="options">Loading subjects...</div>
-  <div id="quiz" class="quiz-container"></div>
+  <div id="quiz"></div>
 
   <script>
     const SUBJECTS_URL =
       "https://gist.githubusercontent.com/ramyfouad397/7d4d72839a2a50146c671cf43328024d/raw/92ae246ae7f2367c50275ae3e98e39fb1fe1fb8c/subjects.txt";
 
-    // Load Subjects
+    const FALLBACK_SUBJECTS = [
+      {
+        "name": "Hematology",
+        "file": "https://gist.githubusercontent.com/ramyfouad397/381b483fdae128327e1af1846cc8862b/raw/545af35a25f49138a5d5144f14c223d6cea8b6f4/hematology_subject.txt"
+      }
+    ];
+
     async function loadSubjects() {
       try {
         console.log("Fetching subjects from:", SUBJECTS_URL);
-
         const res = await fetch(SUBJECTS_URL);
         const text = await res.text();
         console.log("Subjects raw response:", text);
 
-        let subjects;
-        try {
-          subjects = JSON.parse(text);
-        } catch (parseErr) {
-          throw new Error("JSON parse error: " + parseErr.message + "\nRaw text: " + text);
-        }
-
-        const container = document.getElementById("options");
-        container.innerHTML = "<h2>Select a Subject</h2>";
-
-        subjects.forEach(subject => {
-          const btn = document.createElement("button");
-          btn.textContent = subject.name;
-          btn.onclick = () => loadTopics(subject);
-          container.appendChild(btn);
-        });
+        let subjects = JSON.parse(text);
+        renderSubjects(subjects);
       } catch (err) {
-        document.getElementById("options").innerHTML =
-          "<p style='color:red'>❌ Error loading subjects: " + err + "</p>";
         console.error("Subjects load error:", err);
+        document.getElementById("options").innerHTML =
+          "<p style='color:red'>❌ Error loading subjects, using fallback.</p>";
+        renderSubjects(FALLBACK_SUBJECTS);
       }
     }
 
-    // Load Topics
+    function renderSubjects(subjects) {
+      const container = document.getElementById("options");
+      container.innerHTML = "<h2>Select a Subject</h2>";
+      subjects.forEach(subject => {
+        const btn = document.createElement("button");
+        btn.textContent = subject.name;
+        btn.onclick = () => loadTopics(subject);
+        container.appendChild(btn);
+      });
+    }
+
     async function loadTopics(subject) {
       try {
-        console.log("Loading topics for subject:", subject);
+        console.log("Loading topics from:", subject.file);
         const res = await fetch(subject.file);
         const text = await res.text();
         console.log("Topics raw response:", text);
 
-        let topics;
-        try {
-          topics = JSON.parse(text);
-        } catch (parseErr) {
-          throw new Error("JSON parse error in topics: " + parseErr.message + "\nRaw text: " + text);
-        }
-
+        let topics = JSON.parse(text);
         const container = document.getElementById("options");
         container.innerHTML = `<h2>${subject.name}: Select Topic</h2>`;
-
         topics.forEach(topic => {
           const btn = document.createElement("button");
           btn.textContent = topic.name;
@@ -100,29 +66,21 @@
         });
       } catch (err) {
         document.getElementById("options").innerHTML =
-          "<p style='color:red'>❌ Error loading topics: " + err + "</p>";
+          "<p style='color:red'>❌ Error loading topics.</p>";
         console.error("Topics load error:", err);
       }
     }
 
-    // Load Quizzes
     async function loadQuizzes(topic) {
       try {
-        console.log("Loading quizzes for topic:", topic);
+        console.log("Loading quizzes from:", topic.file);
         const res = await fetch(topic.file);
         const text = await res.text();
         console.log("Quizzes raw response:", text);
 
-        let quizzes;
-        try {
-          quizzes = JSON.parse(text);
-        } catch (parseErr) {
-          throw new Error("JSON parse error in quizzes: " + parseErr.message + "\nRaw text: " + text);
-        }
-
+        let quizzes = JSON.parse(text);
         const container = document.getElementById("options");
         container.innerHTML = `<h2>${topic.name}: Select Quiz</h2>`;
-
         quizzes.forEach((quiz, idx) => {
           const btn = document.createElement("button");
           btn.textContent = `Quiz ${idx + 1}`;
@@ -131,12 +89,11 @@
         });
       } catch (err) {
         document.getElementById("options").innerHTML =
-          "<p style='color:red'>❌ Error loading quizzes: " + err + "</p>";
+          "<p style='color:red'>❌ Error loading quizzes.</p>";
         console.error("Quizzes load error:", err);
       }
     }
 
-    // Start Quiz
     async function startQuiz(url) {
       try {
         console.log("Loading quiz from:", url);
@@ -144,13 +101,7 @@
         const text = await res.text();
         console.log("Quiz raw response:", text);
 
-        let questions;
-        try {
-          questions = JSON.parse(text);
-        } catch (parseErr) {
-          throw new Error("JSON parse error in quiz: " + parseErr.message + "\nRaw text: " + text);
-        }
-
+        let questions = JSON.parse(text);
         const quizDiv = document.getElementById("quiz");
         quizDiv.innerHTML = "";
 
@@ -160,7 +111,6 @@
             quizDiv.innerHTML = "<h3>Quiz Finished!</h3>";
             return;
           }
-
           const q = questions[qIndex];
           quizDiv.innerHTML = `<h3>${q.question}</h3>`;
           q.options.forEach(opt => {
@@ -177,12 +127,11 @@
         showQuestion();
       } catch (err) {
         document.getElementById("quiz").innerHTML =
-          "<p style='color:red'>❌ Error loading quiz: " + err + "</p>";
+          "<p style='color:red'>❌ Error loading quiz.</p>";
         console.error("Quiz load error:", err);
       }
     }
 
-    // Start App
     loadSubjects();
   </script>
 </body>
