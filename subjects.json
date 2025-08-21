@@ -2,5 +2,9 @@
   {
     "name": "Hematology",
     "file": "hematology_subject.json"
+  },
+  {
+    "name": "Miscellaneous",
+    "file": "miscellaneous_subject.json"
   }
 ]
