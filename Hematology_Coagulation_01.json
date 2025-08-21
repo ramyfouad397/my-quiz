@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Acquired hemophilia A is most commonly caused by autoantibodies against which factor?",
+    "options": ["Factor VII", "Factor VIII", "Factor IX", "von Willebrand factor"],
+    "answer": "Factor VIII",
+    "explanation": "Acquired hemophilia A (AHA) is due to neutralizing autoantibodies (inhibitors) directed against factor VIII, leading to bleeding in patients with no prior bleeding history."
+  },
+  {
+    "question": "Which laboratory pattern most strongly suggests acquired hemophilia A?",
+    "options": ["Prolonged PT and normal aPTT", "Isolated prolonged aPTT that fails to correct on mixing study", "Normal PT and aPTT with thrombocytopenia", "Prolonged PT that corrects on mixing study"],
+    "answer": "Isolated prolonged aPTT that fails to correct on mixing study",
+    "explanation": "AHA typically presents with an isolated prolonged aPTT. Failure to correct after a 1:1 mix (especially after incubation) indicates an inhibitor rather than simple factor deficiency."
+  },
+  {
+    "question": "What assay is used to quantify the inhibitor titer in acquired hemophilia A?",
+    "options": ["Dilute Russell viper venom test", "Chromogenic anti-Xa assay", "Nijmegen-modified Bethesda assay", "Thrombin time"],
+    "answer": "Nijmegen-modified Bethesda assay",
+    "explanation": "The Nijmegen-modified Bethesda assay is the standard to quantify FVIII inhibitor strength in Bethesda Units (BU)."
+  },
+  {
+    "question": "Which clinical presentation is MOST typical of acquired hemophilia A?",
+    "options": ["Hemarthroses in childhood", "Postpartum bleeding or spontaneous large soft-tissue hematomas in adults", "Petechiae without mucosal bleeding", "Isolated cerebral hemorrhage in neonates"],
+    "answer": "Postpartum bleeding or spontaneous large soft-tissue hematomas in adults",
+    "explanation": "Unlike congenital hemophilia (hemarthroses), AHA often presents in older adults or postpartum patients with spontaneous bruising, muscle/soft-tissue hematomas, and mucosal bleeding."
+  },
+  {
+    "question": "Which of the following is NOT a common association/trigger for acquired hemophilia A?",
+    "options": ["Autoimmune diseases", "Malignancy", "Pregnancy/postpartum state", "Congenital hemophilia A carrier state"],
+    "answer": "Congenital hemophilia A carrier state",
+    "explanation": "AHA is an autoimmune condition. Known associations include autoimmune disease, malignancy, and postpartum period. Being a carrier of congenital hemophilia is unrelated to AHA."
+  },
+  {
+    "question": "Immediate management of clinically significant bleeding in acquired hemophilia A primarily relies on:",
+    "options": ["Desmopressin (DDAVP) alone", "Bypassing agents (rFVIIa or aPCC) or recombinant porcine FVIII", "Fresh frozen plasma alone", "Vitamin K administration"],
+    "answer": "Bypassing agents (rFVIIa or aPCC) or recombinant porcine FVIII",
+    "explanation": "Hemostatic control in AHA uses rFVIIa, aPCC, or rpFVIII because human FVIII is neutralized by the inhibitor; DDAVP may help only in very mild/low-titer cases."
+  },
+  {
+    "question": "Which statement about combining bypassing agents is correct?",
+    "options": ["Combining rFVIIa and aPCC is recommended to maximize efficacy", "Combining rFVIIa and aPCC increases thrombotic risk and is generally avoided", "Bypassing agents have no thrombosis risk", "rFVIIa and aPCC are ineffective in AHA"],
+    "answer": "Combining rFVIIa and aPCC increases thrombotic risk and is generally avoided",
+    "explanation": "Guidelines caution against routine combination due to increased thrombotic complications; use one agent at a time and switch only if needed."
+  },
+  {
+    "question": "The cornerstone of eradicating the inhibitor in acquired hemophilia A is:",
+    "options": ["Antifibrinolytics alone", "Immediate FVIII replacement only", "Immunosuppression (e.g., corticosteroids ± cyclophosphamide or rituximab)", "Platelet transfusion"],
+    "answer": "Immunosuppression (e.g., corticosteroids ± cyclophosphamide or rituximab)",
+    "explanation": "Inhibitor eradication requires immunosuppression. Prednisone/prednisolone ± cyclophosphamide and/or rituximab are frequently used first-line strategies."
+  },
+  {
+    "question": "Which mixing study result is characteristic of acquired hemophilia A?",
+    "options": ["Immediate correction of aPTT that persists after incubation", "No correction immediately or after incubation due to time-dependent inhibitor", "Correction after incubation only", "Over-correction to shorter-than-normal aPTT"],
+    "answer": "No correction immediately or after incubation due to time-dependent inhibitor",
+    "explanation": "AHA features a time/temperature-dependent inhibitor to FVIII, so the prolonged aPTT typically fails to correct, especially after incubation."
+  },
+  {
+    "question": "Which of the following is TRUE about epidemiology of acquired hemophilia A?",
+    "options": ["It primarily affects children under 10 years", "Incidence peaks in older adults and in the postpartum period", "It is equally common in all ages with no peaks", "It occurs only in males"],
+    "answer": "Incidence peaks in older adults and in the postpartum period",
+    "explanation": "AHA is rare overall but shows peaks in the elderly and postpartum women; it affects both sexes with no childhood predominance."
+  },
+  {
+    "question": "Which parameter best correlates with bleeding risk/severity in AHA?",
+    "options": ["Platelet count", "PT (prothrombin time)", "FVIII activity level and clinical context", "D-dimer level alone"],
+    "answer": "FVIII activity level and clinical context",
+    "explanation": "Bleeding risk relates to very low FVIII activity and patient factors; PT is typically normal and platelet count is usually normal in AHA."
+  },
+  {
+    "question": "Which is an appropriate first-line immunosuppressive regimen in many AHA patients?",
+    "options": ["Prednisone alone or prednisone plus cyclophosphamide", "Aspirin and clopidogrel", "High-dose IV vitamin K", "Heparin infusion"],
+    "answer": "Prednisone alone or prednisone plus cyclophosphamide",
+    "explanation": "Guidelines support corticosteroids ± cyclophosphamide as common first-line choices; rituximab is also used upfront or second line."
+  },
+  {
+    "question": "Which test result pattern fits AHA?",
+    "options": ["Normal aPTT, prolonged PT, low fibrinogen", "Prolonged aPTT, normal PT, normal platelets", "Prolonged PT and aPTT with thrombocytopenia", "Isolated prolonged PT with low factor VII"],
+    "answer": "Prolonged aPTT, normal PT, normal platelets",
+    "explanation": "AHA typically shows isolated aPTT prolongation; PT, fibrinogen, and platelet counts are generally normal unless another process coexists."
+  },
+  {
+    "question": "Which agent is specifically designed to replace factor VIII when human FVIII is inhibited by autoantibodies?",
+    "options": ["Tranexamic acid", "Recombinant porcine FVIII (rpFVIII)", "Prothrombin complex concentrate (non-activated)", "Cryoprecipitate"],
+    "answer": "Recombinant porcine FVIII (rpFVIII)",
+    "explanation": "rpFVIII is less cross-reactive with some human FVIII inhibitors and can restore FVIII activity when bypassing agents are unsuitable or unavailable."
+  },
+  {
+    "question": "Major cause of mortality in acquired hemophilia A—even with modern therapy—includes:",
+    "options": ["Liver failure from transfusions", "Pulmonary embolism from DDAVP", "Severe bleeding and infections related to immunosuppression", "Allergic reactions to vitamin K"],
+    "answer": "Severe bleeding and infections related to immunosuppression",
+    "explanation": "Mortality stems from uncontrolled bleeding and from infections due to immunosuppressive therapy required to eradicate the inhibitor."
+  },
+  {
+    "question": "Which situation best fits postpartum AHA?",
+    "options": ["Develops during the first trimester and resolves before delivery", "Often presents within months after delivery in women without prior bleeding history", "Occurs only in women with congenital hemophilia", "Characterized mainly by hemarthroses"],
+    "answer": "Often presents within months after delivery in women without prior bleeding history",
+    "explanation": "Postpartum AHA typically presents weeks to months after delivery in previously healthy women, with mucocutaneous/soft-tissue bleeding rather than joint bleeds."
+  },
+  {
+    "question": "Regarding antifibrinolytics in AHA, which is TRUE?",
+    "options": ["Tranexamic acid is never used", "Tranexamic acid may be used, but caution is needed if combined with aPCC due to thrombosis risk", "Antifibrinolytics correct aPTT to normal", "They replace factor VIII activity directly"],
+    "answer": "Tranexamic acid may be used, but caution is needed if combined with aPCC due to thrombosis risk",
+    "explanation": "Antifibrinolytics support mucosal hemostasis but do not replace FVIII. Combining with aPCC can increase thrombotic risk and requires careful judgment."
+  },
+  {
+    "question": "Which scenario most strongly supports switching hemostatic agents in AHA?",
+    "options": ["Stable mild bleeding on rFVIIa", "No hemostatic response or worsening bleed on current agent (e.g., rFVIIa) despite optimal dosing", "Normal aPTT after first dose", "Patient refuses lab monitoring"],
+    "answer": "No hemostatic response or worsening bleed on current agent (e.g., rFVIIa) despite optimal dosing",
+    "explanation": "If bleeding control is inadequate, switching from one bypassing agent to another (or to rpFVIII) is recommended rather than combining them."
+  },
+  {
+    "question": "Which of the following is the BEST description of treatment goals in AHA?",
+    "options": ["Only control bleeding; eradication is unnecessary", "Immediate bleeding control + inhibitor eradication + manage underlying trigger", "Only eradicate inhibitor; bleeding will stop itself", "Use anticoagulation to normalize aPTT"],
+    "answer": "Immediate bleeding control + inhibitor eradication + manage underlying trigger",
+    "explanation": "Management has three pillars: control bleeding with hemostatic therapy, eradicate the inhibitor with immunosuppression, and address any associated condition."
+  },
+  {
+    "question": "Which of the following statements about recurrence/relapse in AHA is MOST accurate?",
+    "options": ["Relapse never occurs once remission is achieved", "Relapse can occur; ongoing follow-up with FVIII activity and aPTT monitoring is recommended", "Relapse only occurs in postpartum cases", "Relapse correlates with PT, not FVIII activity"],
+    "answer": "Relapse can occur; ongoing follow-up with FVIII activity and aPTT monitoring is recommended",
+    "explanation": "Patients can relapse; periodic monitoring (FVIII level, aPTT, inhibitor testing when indicated) is advised even after clinical remission."
+  }
+]
