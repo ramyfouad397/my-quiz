@@ -4,124 +4,106 @@
   <meta charset="UTF-8">
   <title>Quiz App</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    .container { max-width: 700px; margin: auto; }
-    button { margin: 5px; padding: 10px 15px; cursor: pointer; }
-    .question { font-weight: bold; margin-top: 20px; }
-    .options button { display: block; margin: 5px 0; width: 100%; }
-    .feedback { margin-top: 10px; }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #28a745;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Quiz App</h1>
-    <div id="app">Loading subjects...</div>
+  <div class="container" id="app">
+    <h2>Select a Subject</h2>
+    <div id="content"></div>
   </div>
 
   <script>
-    const subjectsUrl = "https://gist.githubusercontent.com/ramyfouad397/7d4d72839a2a50146c671cf43328024d/raw/72014a8078e02da71415375ffb7db3bdd676df8b/subjects.txt";
+    const app = document.getElementById("app");
+    const content = document.getElementById("content");
 
-    let subjectsData = null;
-    let currentQuiz = null;
-    let currentQuestion = 0;
-
-    async function loadJSON(url) {
-      try {
-        const res = await fetch(url);
-        const text = await res.text();
-        return JSON.parse(text);
-      } catch (err) {
-        console.error("Error loading JSON:", err);
-        document.getElementById("app").innerHTML = "❌ Failed to load file: " + url;
-      }
-    }
-
-    async function init() {
-      subjectsData = await loadJSON(subjectsUrl);
-      if (subjectsData) {
-        showSubjects(subjectsData.subjects);
-      }
-    }
-
-    function showSubjects(subjects) {
-      const app = document.getElementById("app");
-      app.innerHTML = "<h2>Select Subject</h2>";
-      subjects.forEach(subject => {
-        const btn = document.createElement("button");
-        btn.textContent = subject.name;
-        btn.onclick = () => showTopics(subject);
-        app.appendChild(btn);
-      });
-    }
-
-    async function showTopics(subject) {
-      const topicsData = await loadJSON(subject.url);
-      const app = document.getElementById("app");
-      app.innerHTML = `<h2>${subject.name}: Select Topic</h2>`;
-      topicsData.topics.forEach(topic => {
-        const btn = document.createElement("button");
-        btn.textContent = topic.name;
-        btn.onclick = () => showQuizzes(topic);
-        app.appendChild(btn);
-      });
-    }
-
-    async function showQuizzes(topic) {
-      const quizzesData = await loadJSON(topic.url);
-      const app = document.getElementById("app");
-      app.innerHTML = `<h2>${topic.name}: Select Quiz</h2>`;
-      quizzesData.quizzes.forEach(quiz => {
-        const btn = document.createElement("button");
-        btn.textContent = quiz.name;
-        btn.onclick = () => startQuiz(quiz.url);
-        app.appendChild(btn);
-      });
-    }
-
-    async function startQuiz(url) {
-      currentQuiz = await loadJSON(url);
-      currentQuestion = 0;
-      showQuestion();
-    }
-
-    function showQuestion() {
-      const app = document.getElementById("app");
-      const q = currentQuiz.questions[currentQuestion];
-      app.innerHTML = `<div class="question">${q.question}</div>`;
-      const optionsDiv = document.createElement("div");
-      optionsDiv.className = "options";
-
-      q.options.forEach(opt => {
-        const btn = document.createElement("button");
-        btn.textContent = opt;
-        btn.onclick = () => checkAnswer(opt, q);
-        optionsDiv.appendChild(btn);
+    // Load Subjects
+    fetch("https://gist.githubusercontent.com/ramyfouad397/7d4d72839a2a50146c671cf43328024d/raw/72014a8078e02da71415375ffb7db3bdd676df8b/subjects.txt")
+      .then(res => res.json())
+      .then(subjects => {
+        content.innerHTML = "";
+        subjects.forEach(subject => {
+          let btn = document.createElement("button");
+          btn.innerText = subject.name;
+          btn.onclick = () => loadTopics(subject.file);
+          content.appendChild(btn);
+        });
       });
 
-      app.appendChild(optionsDiv);
-      const feedback = document.createElement("div");
-      feedback.className = "feedback";
-      app.appendChild(feedback);
+    // Load Topics
+    function loadTopics(file) {
+      fetch(file) // this must be .txt now
+        .then(res => res.json())
+        .then(topics => {
+          content.innerHTML = "<h2>Select a Topic</h2>";
+          topics.forEach(topic => {
+            let btn = document.createElement("button");
+            btn.innerText = topic.name;
+            btn.onclick = () => loadQuiz(topic.file);
+            content.appendChild(btn);
+          });
+        });
     }
 
-    function checkAnswer(selected, q) {
-      const feedback = document.querySelector(".feedback");
-      if (selected === q.answer) {
-        feedback.innerHTML = `<span style="color:green;">✔ Correct!</span><br>${q.explanation}`;
-      } else {
-        feedback.innerHTML = `<span style="color:red;">✘ Wrong.</span><br>Correct: <b>${q.answer}</b><br>${q.explanation}`;
-      }
-      setTimeout(() => {
-        currentQuestion++;
-        if (currentQuestion < currentQuiz.questions.length) {
+    // Load Quiz
+    function loadQuiz(file) {
+      fetch(file) // also .txt
+        .then(res => res.json())
+        .then(quiz => {
+          let index = 0;
+          let score = 0;
+          function showQuestion() {
+            if (index < quiz.length) {
+              let q = quiz[index];
+              content.innerHTML = `
+                <h3>${q.question}</h3>
+                ${q.options.map((opt, i) =>
+                  `<button onclick="answer(${i})">${opt}</button>`).join("")}
+              `;
+            } else {
+              content.innerHTML = `<h2>Your Score: ${score} / ${quiz.length}</h2>`;
+            }
+          }
+          window.answer = function(i) {
+            if (quiz[index].options[i] === quiz[index].answer) {
+              score++;
+              alert("Correct! " + quiz[index].explanation);
+            } else {
+              alert("Wrong! " + quiz[index].explanation);
+            }
+            index++;
+            showQuestion();
+          }
           showQuestion();
-        } else {
-          document.getElementById("app").innerHTML = "<h2>🎉 Quiz Completed!</h2>";
-        }
-      }, 2500);
+        });
     }
-
-    init();
   </script>
 </body>
 </html>
