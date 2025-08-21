@@ -2,5 +2,25 @@
   {
     "name": "RBC Quiz 01",
     "file": "Hematology_RBC_01.json"
+  },
+  {
+    "name": "RBC Quiz 02",
+    "file": "Hematology_RBC_02.json"
+  },
+  {
+    "name": "RBC Quiz 03",
+    "file": "Hematology_RBC_03.json"
+  },
+  {
+    "name": "RBC Quiz 04",
+    "file": "Hematology_RBC_04.json"
+  },
+  {
+    "name": "RBC Quiz 05",
+    "file": "Hematology_RBC_05.json"
+  },
+  {
+    "name": "RBC Quiz 06",
+    "file": "Hematology_RBC_06.json"
   }
 ]
