@@ -1,0 +1,114 @@
+[
+  {
+    "question": "Antithrombin primarily inhibits which activated clotting factors?",
+    "options": ["Factor V and VIII", "Thrombin (IIa) and Factor Xa", "Protein C and Protein S", "Fibrinogen and Fibrin"],
+    "answer": "Thrombin (IIa) and Factor Xa",
+    "explanation": "Antithrombin is a natural anticoagulant that neutralizes thrombin (IIa) and factor Xa (and to a lesser extent factors IXa/XIa) :contentReference[oaicite:0]{index=0}."
+  },
+  {
+    "question": "What is the inheritance pattern of congenital antithrombin deficiency?",
+    "options": ["Autosomal dominant", "Autosomal recessive", "X-linked recessive", "Mitochondrial"],
+    "answer": "Autosomal dominant",
+    "explanation": "Hereditary AT deficiency is typically autosomal dominant; homozygous deficiency is usually incompatible with life :contentReference[oaicite:1]{index=1}."
+  },
+  {
+    "question": "Which form of antithrombin deficiency has normal antigen levels but reduced function?",
+    "options": ["Type I", "Type II", "Type III", "Type IV"],
+    "answer": "Type II",
+    "explanation": "Type II (qualitative) AT deficiency shows normal protein levels but decreased activity :contentReference[oaicite:2]{index=2}."
+  },
+  {
+    "question": "Which inherited deficiency subtype is most common in symptomatic patients?",
+    "options": ["Type Ia", "Type Ib", "Type I", "Type II"],
+    "answer": "Type I",
+    "explanation": "Although type II is more common population-wide, type I is more prevalent among symptomatic patients :contentReference[oaicite:3]{index=3}."
+  },
+  {
+    "question": "The prevalence of antithrombin deficiency in the general population is approximately:",
+    "options": ["0.01%", "0.1–0.2%", "1–2%", "5%"],
+    "answer": "0.1–0.2%",
+    "explanation": "Prevalence ranges from 0.02% to 0.2% in the general population :contentReference[oaicite:4]{index=4}."
+  },
+  {
+    "question": "Which clinical manifestation is most characteristic of antithrombin deficiency?",
+    "options": ["Bleeding diathesis", "Increased venous thrombosis risk", "Mucosal bleeding", "Platelet aggregation defects"],
+    "answer": "Increased venous thrombosis risk",
+    "explanation": "AT deficiency is a thrombophilia that significantly increases venous thromboembolism risk :contentReference[oaicite:5]{index=5}."
+  },
+  {
+    "question": "Which site of thrombosis is notably associated with antithrombin deficiency?",
+    "options": ["Femoral override", "Superficial veins", "Hepatic, portal, cerebral veins", "Brain arteries"],
+    "answer": "Hepatic, portal, cerebral veins",
+    "explanation": "AT deficiency may cause thromboses in unusual venous sites such as hepatic, portal, and cerebral veins :contentReference[oaicite:6]{index=6}."
+  },
+  {
+    "question": "Which lab test is best to initially assess for antithrombin deficiency?",
+    "options": ["PT", "aPTT", "Functional antithrombin assay", "Antigen levels"],
+    "answer": "Functional antithrombin assay",
+    "explanation": "Functional activity assay is the preferred initial test; antigen levels follow to distinguish Type I vs II :contentReference[oaicite:7]{index=7}."
+  },
+  {
+    "question": "Why should AT testing be avoided during acute thrombosis or anticoagulant use?",
+    "options": ["False high levels", "False low levels", "Appearance of inhibitors", "Endothelial activation"],
+    "answer": "False low levels",
+    "explanation": "AT levels may be transiently low after thrombosis or while on heparin; results should be confirmed later :contentReference[oaicite:8]{index=8}."
+  },
+  {
+    "question": "In congenital AT deficiency, the lifetime risk of VTE is estimated at:",
+    "options": ["<20%", "40–60%", "50–85%", "100%"],
+    "answer": "50–85%",
+    "explanation": "Lifetime risk of thrombosis in congenital AT deficiency is estimated at 50–85% :contentReference[oaicite:9]{index=9}."
+  },
+  {
+    "question": "Which therapy may be required for AT-deficient patients undergoing surgery?",
+    "options": ["Aspirin", "AT concentrate", "Prothrombin complex", "Platelets"],
+    "answer": "AT concentrate",
+    "explanation": "Correction with AT concentrate is recommended for major surgery in AT-deficient patients :contentReference[oaicite:10]{index=10}."
+  },
+  {
+    "question": "If a patient with AT deficiency is heparin-resistant, which is recommended?",
+    "options": ["Increase heparin dose", "Switch to AT concentrate or direct thrombin inhibitor", "Use warfarin immediately", "Use tPA"],
+    "answer": "Switch to AT concentrate or direct thrombin inhibitor",
+    "explanation": "If heparin response is inadequate, use AT concentrate or direct thrombin inhibitors such as argatroban :contentReference[oaicite:11]{index=11}."
+  },
+  {
+    "question": "Which inherited condition increases thrombosis risk most among thrombophilias?",
+    "options": ["Protein C deficiency", "AT deficiency", "Factor V Leiden", "Prothrombin 20210A"],
+    "answer": "AT deficiency",
+    "explanation": "Congenital AT deficiency carries the highest thrombosis risk of inherited thrombophilias :contentReference[oaicite:12]{index=12}."
+  },
+  {
+    "question": "Individuals with inherited AT deficiency typically require:",
+    "options": ["Short-term aspirin", "Lifelong anticoagulation after first event", "Only compression stockings", "Intermittent heparin")));
+  },
+  {
+    "question": "Women with AT deficiency during pregnancy have high risk for:",
+    "options": ["Placental thrombosis and fetal loss", "Bleeding postpartum only", "No increased risk", "Hemolysis"],
+    "answer": "Placental thrombosis and fetal loss",
+    "explanation": "Pregnant women with AT deficiency have elevated risk for clots in placenta leading to miscarriage or stillbirth :contentReference[oaicite:13]{index=13}."
+  },
+  {
+    "question": "Which of the following conditions can cause acquired AT deficiency?",
+    "options": ["Nephrotic syndrome, DIC, liver disease", "Hemophilia A", "Von Willebrand disease", "Hemophagocytic syndrome"],
+    "answer": "Nephrotic syndrome, DIC, liver disease",
+    "explanation": "Acquired deficiencies occur in DIC, nephrotic syndrome, liver disease, sepsis, asparaginase therapy, and heparin use :contentReference[oaicite:14]{index=14}."
+  },
+  {
+    "question": "Which laboratory pattern might you observe with acquired AT deficiency?",
+    "options": ["Thrombocytopenia", "Low AT levels, normal PT/aPTT", "Prolonged PT only", "Isolated elevated D-dimer"],
+    "answer": "Low AT levels, normal PT/aPTT",
+    "explanation": "Acquired AT deficiency typically presents with low AT activity but normal PT/aPTT unless coagulopathy develops :contentReference[oaicite:15]{index=15}."
+  },
+  {
+    "question": "Why might direct oral anticoagulants (DOACs) be used in AT deficiency?",
+    "options": ["They bypass need for AT", "Enhance AT activity", "Activate FVIII", "Are antiplatelet agents"],
+    "answer": "They bypass need for AT",
+    "explanation": "DOACs or direct thrombin inhibitors act independently of antithrombin and may be preferred if AT levels are low :contentReference[oaicite:16]{index=16}."
+  },
+  {
+    "question": "Diagnosis of AT deficiency should be confirmed by:",
+    "options": ["Single low AT level", "Repeat testing off anticoagulation and family studies", "PT prolongation only", "Bleeding time test"],
+    "answer": "Repeat testing off anticoagulation and family studies",
+    "explanation": "Confirmatory diagnosis requires repeat testing once patient is off anticoagulation and may include family testing to distinguish inherited vs acquired :contentReference[oaicite:17]{index=17}."
+  }
+]
