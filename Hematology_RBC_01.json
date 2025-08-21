@@ -1,0 +1,27 @@
+[
+  {
+    "question": "What is the normal lifespan of a red blood cell (RBC) in circulation?",
+    "options": ["60 days", "90 days", "120 days", "150 days"],
+    "answer": "120 days"
+  },
+  {
+    "question": "Which of the following is the main function of red blood cells?",
+    "options": ["Immune defense", "Oxygen transport", "Blood clotting", "Hormone secretion"],
+    "answer": "Oxygen transport"
+  },
+  {
+    "question": "Which protein is responsible for binding oxygen in RBCs?",
+    "options": ["Albumin", "Hemoglobin", "Fibrinogen", "Myosin"],
+    "answer": "Hemoglobin"
+  },
+  {
+    "question": "Which nutrient is essential for hemoglobin synthesis?",
+    "options": ["Vitamin D", "Iron", "Calcium", "Potassium"],
+    "answer": "Iron"
+  },
+  {
+    "question": "What is the typical shape of a healthy RBC?",
+    "options": ["Spherical", "Biconcave disc", "Elliptical", "Rod-shaped"],
+    "answer": "Biconcave disc"
+  }
+]
