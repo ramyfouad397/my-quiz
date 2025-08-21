@@ -6,104 +6,115 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #eef7ff;
       text-align: center;
-      background: #f0f8ff;
       margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 600px;
-      margin: 50px auto;
       padding: 20px;
+    }
+    .card {
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: inline-block;
+      padding: 30px;
+      margin-top: 50px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      max-width: 500px;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 20px;
     }
     button {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
+      display: block;
+      margin: 10px auto;
+      padding: 12px 20px;
       border: none;
       border-radius: 8px;
-      background: #28a745;
+      background-color: #28a745;
       color: white;
+      font-size: 18px;
       cursor: pointer;
+      transition: background 0.3s;
     }
     button:hover {
-      background: #218838;
+      background-color: #218838;
     }
   </style>
 </head>
 <body>
-  <div class="container" id="app">
-    <h2>Select a Subject</h2>
-    <div id="content"></div>
+  <div class="card">
+    <h1 id="title">Select a Subject</h1>
+    <div id="options"></div>
   </div>
 
   <script>
-    const app = document.getElementById("app");
-    const content = document.getElementById("content");
+    // Step 1: Load subjects.json
+    async function loadSubjects() {
+      const res = await fetch("https://gist.githubusercontent.com/ramyfouad397/7d4d72839a2a50146c671cf43328024d/raw/92ae246ae7f2367c50275ae3e98e39fb1fe1fb8c/subjects.txt");
+      const subjects = await res.json();
+      const container = document.getElementById("options");
+      container.innerHTML = "";
 
-    // Load Subjects
-    fetch("https://gist.githubusercontent.com/ramyfouad397/7d4d72839a2a50146c671cf43328024d/raw/72014a8078e02da71415375ffb7db3bdd676df8b/subjects.txt")
-      .then(res => res.json())
-      .then(subjects => {
-        content.innerHTML = "";
-        subjects.forEach(subject => {
-          let btn = document.createElement("button");
-          btn.innerText = subject.name;
-          btn.onclick = () => loadTopics(subject.file);
-          content.appendChild(btn);
-        });
+      subjects.forEach(subject => {
+        const btn = document.createElement("button");
+        btn.textContent = subject.name;
+        btn.onclick = () => loadTopics(subject);
+        container.appendChild(btn);
       });
-
-    // Load Topics
-    function loadTopics(file) {
-      fetch(file) // this must be .txt now
-        .then(res => res.json())
-        .then(topics => {
-          content.innerHTML = "<h2>Select a Topic</h2>";
-          topics.forEach(topic => {
-            let btn = document.createElement("button");
-            btn.innerText = topic.name;
-            btn.onclick = () => loadQuiz(topic.file);
-            content.appendChild(btn);
-          });
-        });
     }
 
-    // Load Quiz
-    function loadQuiz(file) {
-      fetch(file) // also .txt
-        .then(res => res.json())
-        .then(quiz => {
-          let index = 0;
-          let score = 0;
-          function showQuestion() {
-            if (index < quiz.length) {
-              let q = quiz[index];
-              content.innerHTML = `
-                <h3>${q.question}</h3>
-                ${q.options.map((opt, i) =>
-                  `<button onclick="answer(${i})">${opt}</button>`).join("")}
-              `;
+    // Step 2: Load topics for a subject
+    async function loadTopics(subject) {
+      document.getElementById("title").textContent = subject.name + ": Select Topic";
+      const res = await fetch(subject.file);
+      const topics = await res.json();
+      const container = document.getElementById("options");
+      container.innerHTML = "";
+
+      topics.forEach(topic => {
+        const btn = document.createElement("button");
+        btn.textContent = topic.name;
+        btn.onclick = () => loadQuiz(topic);
+        container.appendChild(btn);
+      });
+    }
+
+    // Step 3: Load quiz for a topic
+    async function loadQuiz(topic) {
+      document.getElementById("title").textContent = topic.name + " Quiz";
+      const res = await fetch(topic.file);
+      const questions = await res.json();
+      const container = document.getElementById("options");
+      container.innerHTML = "";
+
+      let index = 0;
+      function showQuestion() {
+        if (index >= questions.length) {
+          container.innerHTML = "<h2>Quiz Finished!</h2>";
+          return;
+        }
+        const q = questions[index];
+        container.innerHTML = `<h3>${q.question}</h3>`;
+        q.options.forEach(opt => {
+          const btn = document.createElement("button");
+          btn.textContent = opt;
+          btn.onclick = () => {
+            if (opt === q.answer) {
+              alert("Correct!");
             } else {
-              content.innerHTML = `<h2>Your Score: ${score} / ${quiz.length}</h2>`;
-            }
-          }
-          window.answer = function(i) {
-            if (quiz[index].options[i] === quiz[index].answer) {
-              score++;
-              alert("Correct! " + quiz[index].explanation);
-            } else {
-              alert("Wrong! " + quiz[index].explanation);
+              alert("Wrong!");
             }
             index++;
             showQuestion();
-          }
-          showQuestion();
+          };
+          container.appendChild(btn);
         });
+      }
+      showQuestion();
     }
+
+    // Run app
+    loadSubjects();
   </script>
 </body>
 </html>
