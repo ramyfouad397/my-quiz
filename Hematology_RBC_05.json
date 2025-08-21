@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Which organ is primarily responsible for removing old and damaged red blood cells?",
+    "options": ["Liver", "Spleen", "Kidney", "Bone marrow"],
+    "answer": "Spleen",
+    "explanation": "The spleen filters and removes aged or damaged red blood cells from circulation."
+  },
+  {
+    "question": "What is the average lifespan of a red blood cell in circulation?",
+    "options": ["30 days", "60 days", "90 days", "120 days"],
+    "answer": "120 days",
+    "explanation": "Normal red blood cells circulate for about 120 days before being cleared by the spleen."
+  },
+  {
+    "question": "Which protein is essential for maintaining the biconcave shape of red blood cells?",
+    "options": ["Spectrin", "Fibrinogen", "Actin", "Myosin"],
+    "answer": "Spectrin",
+    "explanation": "Spectrin is a cytoskeletal protein critical for maintaining RBC membrane stability and shape."
+  },
+  {
+    "question": "What does hypochromia in red blood cells indicate?",
+    "options": ["Excess hemoglobin", "Low hemoglobin content", "Increased cell size", "Presence of nuclei"],
+    "answer": "Low hemoglobin content",
+    "explanation": "Hypochromia refers to pale RBCs due to reduced hemoglobin, commonly seen in iron deficiency anemia."
+  },
+  {
+    "question": "Which abnormal RBC form is typically associated with liver disease and alcoholism?",
+    "options": ["Acanthocytes", "Spherocytes", "Elliptocytes", "Schistocytes"],
+    "answer": "Acanthocytes",
+    "explanation": "Acanthocytes (spur cells) are RBCs with irregular projections, commonly seen in advanced liver disease."
+  },
+  {
+    "question": "Which RBC abnormality is most characteristic of sickle cell anemia?",
+    "options": ["Target cells", "Sickle cells", "Schistocytes", "Dacrocytes"],
+    "answer": "Sickle cells",
+    "explanation": "Sickle-shaped RBCs result from polymerization of hemoglobin S under low oxygen tension."
+  },
+  {
+    "question": "Which laboratory finding is typical in hemolytic anemia?",
+    "options": ["Decreased LDH", "Increased haptoglobin", "Increased bilirubin", "Low reticulocyte count"],
+    "answer": "Increased bilirubin",
+    "explanation": "Hemolysis increases unconjugated bilirubin levels due to breakdown of hemoglobin."
+  },
+  {
+    "question": "Which RBC morphology is typical in thalassemia?",
+    "options": ["Macrocytosis", "Target cells", "Spherocytes", "Dacrocytes"],
+    "answer": "Target cells",
+    "explanation": "Target cells (codocytes) are common in thalassemia due to altered hemoglobin distribution."
+  },
+  {
+    "question": "Which vitamin deficiency leads to megaloblastic anemia?",
+    "options": ["Vitamin B1", "Vitamin B6", "Vitamin B9 (folate)", "Vitamin C"],
+    "answer": "Vitamin B9 (folate)",
+    "explanation": "Folate deficiency impairs DNA synthesis, causing macrocytic megaloblastic anemia."
+  },
+  {
+    "question": "Which red blood cell inclusion represents mitotic spindle remnants?",
+    "options": ["Howell-Jolly bodies", "Basophilic stippling", "Cabot rings", "Heinz bodies"],
+    "answer": "Cabot rings",
+    "explanation": "Cabot rings are remnants of the mitotic spindle and are seen in megaloblastic anemia and lead poisoning."
+  },
+  {
+    "question": "Which test best measures the average size of red blood cells?",
+    "options": ["MCV", "MCH", "MCHC", "RDW"],
+    "answer": "MCV",
+    "explanation": "Mean corpuscular volume (MCV) indicates the average red blood cell size and helps classify anemias as microcytic, normocytic, or macrocytic."
+  },
+  {
+    "question": "Which RBC finding is strongly associated with hereditary spherocytosis?",
+    "options": ["Target cells", "Spherocytes", "Bite cells", "Elliptocytes"],
+    "answer": "Spherocytes",
+    "explanation": "Spherocytes are round RBCs lacking central pallor, seen in hereditary spherocytosis due to membrane protein defects."
+  },
+  {
+    "question": "What is the function of 2,3-bisphosphoglycerate (2,3-BPG) in red blood cells?",
+    "options": ["Increases hemoglobin’s affinity for oxygen", "Decreases hemoglobin’s affinity for oxygen", "Synthesizes heme", "Protects against oxidative stress"],
+    "answer": "Decreases hemoglobin’s affinity for oxygen",
+    "explanation": "2,3-BPG binds hemoglobin and decreases its oxygen affinity, facilitating oxygen release to tissues."
+  },
+  {
+    "question": "Which RBC shape is classically seen in severe burns?",
+    "options": ["Acanthocytes", "Spherocytes", "Echinocytes", "Schistocytes"],
+    "answer": "Echinocytes",
+    "explanation": "Echinocytes (burr cells) can develop in severe burns, uremia, and other conditions."
+  },
+  {
+    "question": "Which RBC inclusion is seen in asplenic patients due to impaired filtering?",
+    "options": ["Heinz bodies", "Howell-Jolly bodies", "Cabot rings", "Pappenheimer bodies"],
+    "answer": "Howell-Jolly bodies",
+    "explanation": "Howell-Jolly bodies are nuclear remnants normally removed by the spleen; their presence indicates splenic dysfunction or absence."
+  },
+  {
+    "question": "Which RBC abnormality is typical in autoimmune hemolytic anemia?",
+    "options": ["Target cells", "Spherocytes", "Elliptocytes", "Dacrocytes"],
+    "answer": "Spherocytes",
+    "explanation": "Autoimmune hemolysis leads to partial phagocytosis of RBC membranes, producing spherocytes."
+  },
+  {
+    "question": "What does anisocytosis refer to in hematology?",
+    "options": ["Variation in RBC shape", "Variation in RBC size", "Variation in both size and shape", "Presence of inclusions"],
+    "answer": "Variation in RBC size",
+    "explanation": "Anisocytosis is variation in RBC size, often quantified by the RDW value."
+  },
+  {
+    "question": "Which iron study finding is most consistent with iron deficiency anemia?",
+    "options": ["Low ferritin", "High serum iron", "Low TIBC", "High transferrin saturation"],
+    "answer": "Low ferritin",
+    "explanation": "Ferritin reflects iron storage, and low levels are the most specific marker of iron deficiency."
+  },
+  {
+    "question": "Which test confirms the diagnosis of hereditary spherocytosis?",
+    "options": ["Sickle solubility test", "Osmotic fragility test", "Direct Coombs test", "Ham’s test"],
+    "answer": "Osmotic fragility test",
+    "explanation": "Hereditary spherocytosis RBCs are more prone to lysis in hypotonic solutions, confirmed by the osmotic fragility test."
+  },
+  {
+    "question": "Which condition typically shows rouleaux formation of RBCs?",
+    "options": ["Iron deficiency anemia", "Multiple myeloma", "Thalassemia", "Aplastic anemia"],
+    "answer": "Multiple myeloma",
+    "explanation": "Rouleaux formation (stacking of RBCs) occurs when plasma proteins (like immunoglobulins in multiple myeloma) increase, reducing RBC repulsion."
+  }
+]
