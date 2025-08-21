@@ -1,116 +1,122 @@
 [
-  {
-    "question": "ما هو لقب الأسد في عالم الحيوانات؟",
-    "options": ["ملك الغابة", "ملك الصحراء", "ملك البحر", "ملك السماء"],
-    "answer": "ملك الغابة",
-    "explanation": "يُعرف الأسد بلقب 'ملك الغابة' لقوته ومهارته في الصيد وهيبته بين الحيوانات."
-  },
-  {
-    "question": "ما هو الصوت الشهير الذي يصدره الأسد؟",
-    "options": ["الزئير", "الهدير", "الصفير", "النباح"],
-    "answer": "الزئير",
-    "explanation": "الأسود تصدر الزئير كوسيلة للتواصل وتحديد حدود مناطقها."
-  },
-  {
-    "question": "كم ساعة في اليوم يقضي الأسد في النوم تقريباً؟",
-    "options": ["4-6 ساعات", "10-14 ساعة", "16-20 ساعة", "24 ساعة"],
-    "answer": "16-20 ساعة",
-    "explanation": "الأسود كسولة نسبياً وتقضي معظم يومها في النوم لتوفير الطاقة للصيد."
-  },
-  {
-    "question": "أي جنس من الأسود عادةً ما يمتلك عرفاً كبيراً؟",
-    "options": ["الذكر", "الأنثى", "الصغير", "الجميع"],
-    "answer": "الذكر",
-    "explanation": "ذكور الأسود لها عرف كثيف يميزها عن الإناث ويجعلها تبدو أكبر حجماً."
-  },
-  {
-    "question": "ما هو الطعام الرئيسي للأسود في البرية؟",
-    "options": ["الحيوانات الكبيرة مثل الظباء", "النباتات", "الحشرات", "الفواكه"],
-    "answer": "الحيوانات الكبيرة مثل الظباء",
-    "explanation": "الأسود هي مفترسات تصطاد الحيوانات الكبيرة لتأمين حاجتها من البروتين."
-  },
-  {
-    "question": "كم عدد الأسود عادةً في المجموعة (الفخر)؟",
-    "options": ["5-10", "10-15", "15-30", "30-50"],
-    "answer": "15-30",
-    "explanation": "الفخر غالباً يتكون من 15 إلى 30 أسداً يتعاونون في الصيد والحماية."
-  },
-  {
-    "question": "أي من الحيوانات التالية غالباً ما تصطادها الأسود في السافانا؟",
-    "options": ["الظباء", "الزرافات الصغيرة", "النعام", "كل ما سبق"],
-    "answer": "كل ما سبق",
-    "explanation": "الأسود تصطاد مجموعة متنوعة من الحيوانات بما في ذلك الظباء والزرافات الصغيرة والنعام."
-  },
-  {
-    "question": "ما هي السرعة القصوى التي يمكن للأسد الوصول إليها عند الصيد؟",
-    "options": ["50 كم/س", "80 كم/س", "30 كم/س", "100 كم/س"],
-    "answer": "50 كم/س",
-    "explanation": "الأسود سريعة لمسافات قصيرة تصل إلى حوالي 50 كم/س أثناء مطاردة الفرائس."
-  },
-  {
-    "question": "ما الحيوان الذي يعتبر أكثر تهديداً للأسود؟",
-    "options": ["الإنسان", "الفيل", "التمساح", "الضبع"],
-    "answer": "الإنسان",
-    "explanation": "الإنسان هو أكبر تهديد للأسود بسبب الصيد وفقدان المواطن الطبيعية."
-  },
-  {
-    "question": "أي من الأنشطة التالية يعتبر مضحكاً عند مشاهدة الأسود؟",
-    "options": ["التمدد على ظهرهم تحت الشمس", "الزئير بصوت منخفض", "التجول ببطء شديد", "اللعق المبالغ فيه لبعضهم البعض"],
-    "answer": "التمدد على ظهرهم تحت الشمس",
-    "explanation": "رؤية الأسد يستلقي على ظهره وكأنه مسترخٍ على الشاطئ غالباً ما يضحك الزوار."
-  },
-  {
-    "question": "كم سنة يعيش الأسد عادةً في البرية؟",
-    "options": ["5-8 سنوات", "10-14 سنة", "15-20 سنة", "25 سنة"],
-    "answer": "10-14 سنة",
-    "explanation": "متوسط عمر الأسد في البرية حوالي 10 إلى 14 سنة، أطول قليلاً في الأسر."
-  },
-  {
-    "question": "ما الفرق الأساسي بين الأسد واللبؤة في الصيد؟",
-    "options": ["اللبؤة تصطاد أكثر", "الأسد يصطاد أكثر", "اللبؤة تبني العش", "الأسد يربي الأشبال"],
-    "answer": "اللبؤة تصطاد أكثر",
-    "explanation": "اللبؤات غالباً ما تقوم بالصيد بينما يبقى الذكر لحماية الفخر."
-  },
-  {
-    "question": "أي الأسد يصدر الزئير الأعلى صوتاً؟",
-    "options": ["الذكر", "الأنثى", "الصغير", "جميعهم بنفس الصوت"],
-    "answer": "الذكر",
-    "explanation": "ذكور الأسود لها صوت زئير أعلى وأقوى يستخدمه لإخافة المنافسين."
-  },
-  {
-    "question": "ما الجزء الأكثر روعة في عرف الأسد؟",
-    "options": ["حجمه وكثافته", "لون العيون", "ذيله الطويل", "أسنانه الحادة"],
-    "answer": "حجمه وكثافته",
-    "explanation": "عرف الذكر يعطيه مظهراً ضخماً ويعد سمة فريدة بين القطط الكبيرة."
-  },
-  {
-    "question": "أي من هذه الحقائق مضحكة عن الأسود؟",
-    "options": ["يتمددون مثل القطط المنزلية", "يتناولون العشب أحياناً", "ينامون معًا كأصدقاء", "جميع ما سبق"],
-    "answer": "جميع ما سبق",
-    "explanation": "الأسود أحياناً تقوم بسلوكيات مضحكة مثل التمدد واللعب أو حتى مضغ بعض الأعشاب."
-  },
-  {
-    "question": "كم عدد الصغار عادةً في ولادة واحدة للأسود؟",
-    "options": ["1-2", "2-4", "4-6", "6-8"],
-    "answer": "2-4",
-    "explanation": "عادةً ما تلد اللبؤة 2 إلى 4 أشبال في الولادة الواحدة."
-  },
-  {
-    "question": "ما هي الطريقة التي يستخدمها الأسد للتواصل مع أفراد الفخر؟",
-    "options": ["الزئير", "الشم", "الإشارة بالذيل", "التحديق"],
-    "answer": "الزئير",
-    "explanation": "الزئير يساعد الأسود على التواصل مع بعضهم البعض وتحديد حدود الفخر."
-  },
-  {
-    "question": "أي من هذه السلوكيات مضحك عند مشاهدة الأسود؟",
-    "options": ["اللعب بالماء", "مضغ الطين", "ركل الأشجار", "التسلق على بعضها البعض"],
-    "answer": "التسلق على بعضها البعض",
-    "explanation": "الأشبال غالباً ما يتسلقون على بعضهم البعض أثناء اللعب، مما يبدو مضحكاً للزوار."
-  },
-  {
-    "question": "ما الذي يميز أسلوب حياة الأسد عن القطط المنزلية؟",
-    "options": ["العيش في مجموعات كبيرة", "النوم أكثر من 16 ساعة", "الصيد الجماعي", "جميع ما سبق"],
-    "answer": "جميع ما سبق",
-    "explanation": "الأسود تختلف عن القطط المنزلية بالعيش في الفخر، الصيد الجماعي والنوم الطويل، مما يجعلها فريدة."
-  }
+{
+"question": "Which of the following is a good source of omega-3 fatty acids?",
+"options": ["Chicken breast", "Avocado", "Salmon", "White rice"],
+"answer": "Salmon",
+"explanation": "Salmon and other fatty fish are excellent sources of omega-3 fatty acids, which are essential for brain and heart health."
+},
+{
+"question": "What is the primary function of carbohydrates in the body?",
+"options": ["Building muscle", "Providing energy", "Storing fat", "Regulating body temperature"],
+"answer": "Providing energy",
+"explanation": "Carbohydrates are the body's main source of fuel. They are broken down into glucose, which is used for energy by cells, tissues, and organs."
+},
+{
+"question": "Which vitamin is crucial for blood clotting?",
+"options": ["Vitamin C", "Vitamin D", "Vitamin K", "Vitamin A"],
+"answer": "Vitamin K",
+"explanation": "Vitamin K plays a vital role in the synthesis of proteins required for blood coagulation, or clotting."
+},
+{
+"question": "Which food group provides the most fiber?",
+"options": ["Dairy", "Meat", "Fruits and vegetables", "Fats and oils"],
+"answer": "Fruits and vegetables",
+"explanation": "Fruits, vegetables, and whole grains are rich in dietary fiber, which is important for digestive health."
+},
+{
+"question": "What is a complete protein?",
+"options": ["A protein with a high fat content", "A protein that contains all nine essential amino acids", "A protein that is easy to digest", "A protein found only in animal products"],
+"answer": "A protein that contains all nine essential amino acids",
+"explanation": "A complete protein source contains all nine essential amino acids that the body cannot produce on its own. Examples include meat, eggs, and dairy, as well as some plant-based sources like quinoa and soy."
+},
+{
+"question": "How many glasses of water should a person drink per day on average?",
+"options": ["2-4 glasses", "4-6 glasses", "8-10 glasses", "1-2 glasses"],
+"answer": "8-10 glasses",
+"explanation": "While individual needs vary, a common recommendation is to drink about 8 glasses (or 2 liters) of water per day to stay properly hydrated."
+},
+{
+"question": "Which mineral is essential for strong bones and teeth?",
+"options": ["Iron", "Sodium", "Potassium", "Calcium"],
+"answer": "Calcium",
+"explanation": "Calcium is a crucial mineral for the development and maintenance of strong bones and teeth."
+},
+{
+"question": "Which of the following foods is a good source of probiotics?",
+"options": ["Yogurt", "White bread", "Chicken", "Orange juice"],
+"answer": "Yogurt",
+"explanation": "Yogurt, kefir, and other fermented foods contain probiotics, which are beneficial bacteria that support gut health."
+},
+{
+"question": "What is the recommended daily intake of sugar for an adult?",
+"options": ["Less than 10g", "Less than 25g", "Less than 50g", "Less than 100g"],
+"answer": "Less than 25g",
+"explanation": "The World Health Organization (WHO) recommends that adults and children reduce their daily intake of free sugars to less than 10% of their total energy intake. A further reduction to below 5% (approximately 25 grams or 6 teaspoons) is suggested for additional health benefits."
+},
+{
+"question": "Which type of fat is considered the healthiest?",
+"options": ["Saturated fat", "Trans fat", "Unsaturated fat", "Hydrogenated fat"],
+"answer": "Unsaturated fat",
+"explanation": "Unsaturated fats, found in foods like avocados, nuts, and olive oil, are considered beneficial for heart health when consumed in moderation."
+},
+{
+"question": "What is the role of antioxidants in the body?",
+"options": ["Aiding in muscle growth", "Repairing damaged cells and protecting against free radicals", "Boosting energy levels", "Assisting in digestion"],
+"answer": "Repairing damaged cells and protecting against free radicals",
+"explanation": "Antioxidants help protect the body's cells from damage caused by free radicals, which are linked to various chronic diseases."
+},
+{
+"question": "Which food is a major source of Vitamin C?",
+"options": ["Banana", "Apple", "Orange", "Potato"],
+"answer": "Orange",
+"explanation": "Citrus fruits like oranges are well-known for their high content of Vitamin C, which is important for the immune system."
+},
+{
+"question": "Which of the following is a gluten-free grain?",
+"options": ["Wheat", "Barley", "Rye", "Quinoa"],
+"answer": "Quinoa",
+"explanation": "Quinoa is a pseudocereal that is naturally gluten-free and a complete protein, making it a popular choice for those with gluten sensitivities."
+},
+{
+"question": "What is the term for a food that has added vitamins, minerals, or other nutrients?",
+"options": ["Organic", "Fortified", "Natural", "Refined"],
+"answer": "Fortified",
+"explanation": "Fortified foods have nutrients added to them that are not naturally present or are present in very small quantities."
+},
+{
+"question": "Which of the following is a good source of iron?",
+"options": ["Milk", "Spinach", "Chicken breast", "Grapes"],
+"answer": "Spinach",
+"explanation": "Spinach is a good plant-based source of iron, a mineral vital for producing red blood cells and transporting oxygen throughout the body."
+},
+{
+"question": "How do you calculate your Basal Metabolic Rate (BMR)?",
+"options": ["By measuring your waist circumference", "By determining the number of calories your body needs at rest", "By counting the calories in all the food you eat", "By weighing yourself once a week"],
+"answer": "By determining the number of calories your body needs at rest",
+"explanation": "BMR is the minimum number of calories your body needs to function at rest to maintain essential life functions like breathing and circulation."
+},
+{
+"question": "Which nutrient is crucial for building and repairing body tissues?",
+"options": ["Fats", "Protein", "Vitamins", "Carbohydrates"],
+"answer": "Protein",
+"explanation": "Protein is the building block of life. It is responsible for building, repairing, and maintaining body tissues and is a component of every cell."
+},
+{
+"question": "Which of the following is an example of a healthy snack?",
+"options": ["Potato chips", "Candy bar", "A handful of almonds", "Sugary soda"],
+"answer": "A handful of almonds",
+"explanation": "Almonds and other nuts are nutrient-dense snacks that provide healthy fats, protein, and fiber, promoting a feeling of fullness."
+},
+{
+"question": "What is the recommended daily intake of vegetables for adults?",
+"options": ["1-2 cups", "2.5-3 cups", "4-5 cups", "More than 5 cups"],
+"answer": "2.5-3 cups",
+"explanation": "The U.S. Dietary Guidelines for Americans recommend that adults consume 2.5 to 3 cups of vegetables per day as part of a healthy diet."
+},
+{
+"question": "Which of the following is an empty calorie food?",
+"options": ["Broccoli", "Lean meat", "Soda", "Whole grains"],
+"answer": "Soda",
+"explanation": "Empty calories are those that provide energy primarily from sugar and fat with little to no other nutritional value, such as vitamins, minerals, or fiber. Soda is a prime example of a food that provides empty calories."
+}
 ]
