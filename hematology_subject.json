@@ -1,6 +1,10 @@
 [
   {
-    "name": "Red Cell",
+    "name": "Red Cell Disorders",
     "file": "redcell_topic.json"
+  },
+  {
+    "name": "Coagulation, Hemostasis, and Disorders",
+    "file": "coagulation_topic.json"
   }
 ]
